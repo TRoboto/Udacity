@@ -1,0 +1,20 @@
+{
+  "name": "intel-people-counter-server",
+  "version": "1.0.0",
+  "description": "Node server to support api calls from the people counter UI.",
+  "main": "./server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/udacity"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://www.udacity.com",
+  "dependencies": {
+    "mosca": "^2.5.2",
+    "uuid4": "^1.0.0"
+  }
+}
