@@ -10,7 +10,7 @@ You can choose one of two ways to complete the project. The first method is to u
 
 **NOTE:** If you are prompted to select a kernel when you launch a notebook, choose the **Python 3** kernel.
 
-Alternatively, you can download a copy of the project from GitHub and then run a Jupyter server locally with [Anaconda](https://www.anaconda.com/download/).
+Alternatively, you can download a copy of the project from GitHub [here](https://github.com/udacity/hmm-tagger) and then run a Jupyter server locally with [Anaconda](https://www.anaconda.com/download/).
 
 **NOTES:** These steps are **not** required if you are using the project Workspace.
 
@@ -18,19 +18,19 @@ Alternatively, you can download a copy of the project from GitHub and then run a
 
 1. Open a terminal and clone the project repository:
 ```
-$ git clone https://github.com/udacity/artificial-intelligence
+$ git clone https://github.com/udacity/hmm-tagger
 ```
 
-2. Switch to the project folder and create a conda environment (note: you must already have Anaconda installed):
+3. Switch to the project folder and create a conda environment (note: you must already have Anaconda installed):
 ```
-$ cd "artificial-intelligence/Projects/4_HMM Tagger"
-.../ $ conda env create -f hmm-tagger.yaml
+$ cd hmm-tagger
+hmm-tagger/ $ conda env create -f hmm-tagger.yaml
 ```
 
-3. Activate the conda environment, then run the jupyter notebook server. (Note: windows users should run `activate hmm-tagger`)
+4. Activate the conda environment, then run the jupyter notebook server. (Note: windows users should run `activate hmm-tagger`)
 ```
-.../ $ source activate hmm-tagger
-(hmm-tagger) .../ $ jupyter notebook
+hmm-tagger/ $ source activate hmm-tagger
+(hmm-tagger) hmm-tagger/ $ jupyter notebook
 ```
 
 Depending on your system settings, Jupyter will either open a browser window, or the terminal will print a URL with a security token. If the terminal prints a URL, simply copy the URL and paste it into a browser window to load the Jupyter browser. Once you load the Jupyter browser, select the project notebook (HMM tagger.ipynb) and follow the instructions inside to complete the project.
