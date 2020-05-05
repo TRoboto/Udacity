@@ -26,7 +26,7 @@ Some of the potential reasons for handling custom layers arise from the fact tha
 My method(s) to compare models before and after conversion to Intermediate Representations
 were:
 
-I run the model on my Nvidia GTX 980m before tranforming it to the IR. The model was running in a good speed, I beileve this is because it uses layers for mobile, and I was able to detect all 6 people perfectly. However, running it using OpenVino led to more speed but it wasn't as accuarte as before.
+I run the model on my Nvidia GTX 980m before tranforming it to the IR. The model was running in a good speed, I beileve this is because it uses layers optimized for mobile, and I was able to detect all 6 people perfectly. However, running it using OpenVino led to more speed but it wasn't as accuarte as before.
 
 The difference between model accuracy pre- and post-conversion was not quite big. The original model was able to detect all 6 persons with high confidence of about 80% while the IR model detected 7 persons with a confidence of about 72%, and also failed to detect one person while he was present for more than 5 seconds. 
 
@@ -81,5 +81,5 @@ In investigating potential people counter models, I tried each of the following 
   ```
   python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
   ``` 
-  - The model was insufficient for the app because it also failed to detect 2 persons. It is also not that good as its confidenace of detection a person is somewhere low.
+  - The model was insufficient for the app because it also failed to detect 2 persons. It is also not that good as its confidenace of detecting a person is somewhere low.
   - I tried to improve the model for the app by using SSD MobileNet V2 COCO which I found is the best model from the available zoo models.
