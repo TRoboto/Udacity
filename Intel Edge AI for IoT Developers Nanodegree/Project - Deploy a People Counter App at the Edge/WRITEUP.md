@@ -12,12 +12,12 @@ The process behind converting custom layers involves adding extensions to the mo
 
 I used SSD Mobilenet v2 model which is obtained from [here]( https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html).
 
-Here are the steps I used to get my model ready for inference:  
-1- Downloaded the model using `wget`
-2- Run the following code
-`
+Here are the steps I used to get my model ready for inference:   
+1- Downloaded the model using `wget`  
+2- Run the following code  
+```
 python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json 
-`
+```
 
 Some of the potential reasons for handling custom layers arise from the fact that deep learning models have many different layers that are used nowadays. More new layers and architecture will definitely come up in the near future, thus the need for custom layers is essential if we need to benefit from our models. Also, it is possible that IR doesn't support all the layers from the original framework. Sometimes because of hardware, for example on cpu there are few IR model which are directly supported but others may not.
 
@@ -60,22 +60,26 @@ In investigating potential people counter models, I tried each of the following 
 - Model 1: Faster R-CNN Inception V2 COCO	
   - http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
   - I converted the model to an Intermediate Representation with the following arguments
-  `python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json`
+  ```
+  python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
+  ```
   
   - The model was insufficient for the app because it didn't work, I tried every possible solution provided by the mentors in the hub! there are two input layers which I correctly used the correct layer but the model doesn't work, it fails on wait function.
   
-- Model 2: SSD Inception V2 COCO
+- Model 2: SSD Inception V2 COCO  
   - http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2018_01_28.tar.gz
-  - I converted the model to an Intermediate Representation with the following arguments
-  `python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
-  `
+  - I converted the model to an Intermediate Representation with the following arguments  
+  ```
+  python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
+  ```
   - The model was insufficient for the app because it failed to detect 2 persons in the video for the whole duration of their existence.
   - I tried to improve the model for the app by using the thrid model.
 
 - Model 3: SSD Lite MobileNet V2 COCO
   - http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
-  - I converted the model to an Intermediate Representation with the following arguments
-  `python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
-  `
+  - I converted the model to an Intermediate Representation with the following arguments  
+  ```
+  python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
+  ``` 
   - The model was insufficient for the app because it also failed to detect 2 persons. It is also not that good as its confidenace of detection a person is somewhere low.
   - I tried to improve the model for the app by using SSD MobileNet V2 COCO which I found is the best model from the available zoo models.
