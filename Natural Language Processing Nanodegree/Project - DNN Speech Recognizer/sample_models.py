@@ -98,11 +98,11 @@ def deep_rnn_model(input_dim, units, recur_layers, output_dim=29):
     # Main acoustic input
     input_data = Input(name='the_input', shape=(None, input_dim))
     # TODO: Add recurrent layers, each with batch normalization
-    simple_rnn = GRU(units, activation=activation,
+    simple_rnn = GRU(units, activation='relu',
                      return_sequences=True, implementation=2, name='rnn0')(input_data)
     bn_rnn = BatchNormalization()(simple_rnn)
-    for layer in range(recur_layers, 1):
-        simple_rnn = GRU(units, activation=activation,
+    for layer in range(1, recur_layers):
+        simple_rnn = GRU(units, activation='relu',
                              return_sequences=True, implementation=2, name='rnn'+str(layer))(bn_rnn)
         bn_rnn = BatchNormalization()(simple_rnn)
 
@@ -134,21 +134,21 @@ def bidirectional_rnn_model(input_dim, units, output_dim=29):
     print(model.summary())
     return model
 
-def final_model():
+def final_model(input_dim, units, recur_layers, dropout):
     """ Build a deep network for speech 
     """
     # Main acoustic input
     input_data = Input(name='the_input', shape=(None, input_dim))
     # TODO: Specify the layers in your network
-    simple_rnn = GRU(units, activation=activation,
+    simple_rnn = GRU(units, activation='relu',
                      return_sequences=True, implementation=2, name='rnn0')(input_data)
     bn_rnn = BatchNormalization()(simple_rnn)
-    drop_out_rnn = Dropout(rate=dropout_rate)(bn_rnn)
-    for layer in range(recur_layers, 1):
-        simple_rnn = GRU(units, activation=activation,
+    drop_out_rnn = Dropout(rate=dropout)(bn_rnn)
+    for layer in range(1, recur_layers):
+        simple_rnn = GRU(units, activation='relu',
                          return_sequences=True, implementation=2, name='rnn'+str(layer))(drop_out_rnn)
         bn_rnn = BatchNormalization()(simple_rnn)
-        drop_out_rnn = Dropout(rate=dropout_rate)(bn_rnn)
+        drop_out_rnn = Dropout(rate=dropout)(bn_rnn)
     # TODO: Add softmax activation layer
     y_pred = Activation('softmax',name='softmax')(time_dense)
     # Specify the model
