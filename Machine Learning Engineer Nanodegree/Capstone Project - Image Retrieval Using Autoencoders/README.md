@@ -12,3 +12,6 @@ To build an image retrieval system with an autoencoder, what we really care abou
 Feature vectors that have a smaller distance will be considered more similar, while images with a larger distance will be deemed less similar.  
 
 We  can  then  sort  our  results  based  on  the  distance  (from  smallest  to  largest)  and  finally  display  the image retrieval results to the end user.  
+
+# Results
+<img src='notebook_ims/results.png' width=60%/>
