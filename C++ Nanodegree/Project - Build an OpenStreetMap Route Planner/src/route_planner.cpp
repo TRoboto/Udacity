@@ -103,5 +103,17 @@ void RoutePlanner::AStarSearch() {
     RouteModel::Node *current_node = nullptr;
 
     // TODO: Implement your solution here.
+    this->start_node->visited = true;
+    open_list.push_back(this->start_node);
+    while (open_list.size() > 0)
+    {
+        current_node = NextNode();
+        if (current_node == this->end_node)
+        {
+            this->m_Model.path = ConstructFinalPath(current_node);
+            return;
+        }
+        AddNeighbors(current_node);
+    }
 
 }
