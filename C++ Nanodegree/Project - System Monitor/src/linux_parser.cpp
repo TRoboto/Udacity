@@ -106,7 +106,7 @@ long LinuxParser::UpTime() {
 long LinuxParser::Jiffies() {
   // we can use
   // return LinuxParser::ActiveJiffies() + LinuxParser::IdleJiffies();
-  // but this is faster as we read the file once.
+  // but this is faster since we only read the file once.
   string line;
   string cpu;
   string sUser, sNice, sSystem, sIdle, sIOwait, sIRQ, sSoftIRQ, sSteal, sGuest,
@@ -128,7 +128,24 @@ long LinuxParser::Jiffies() {
 
 // TODO: Read and return the number of active jiffies for a PID
 // REMOVE: [[maybe_unused]] once you define the function
-long LinuxParser::ActiveJiffies(int pid [[maybe_unused]]) { return 0; }
+long LinuxParser::ActiveJiffies(int pid) {
+  string line;
+  string sUtime, sSTime, SCUTime, sCSTime;
+  long jiffies;
+  std::fstream stream{kProcDirectory + to_string(pid) + kStatFilename};
+  if (stream.is_open()) {
+    std::getline(stream, line);
+    std::istringstream linestream{line};
+    for (int i = 0; i < 15; i++) {
+      linestream >> sUtime;
+    }
+    linestream >> sSTime >> SCUTime >> sCSTime;
+
+    jiffies = std::stol(sUtime) + std::stol(sSTime) + std::stol(SCUTime) +
+              std::stol(sCSTime);
+  }
+  return jiffies;
+}
 
 // TODO: Read and return the number of active jiffies for the system
 long LinuxParser::ActiveJiffies() {
