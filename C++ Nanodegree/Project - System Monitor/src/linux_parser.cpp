@@ -222,7 +222,7 @@ int LinuxParser::TotalProcesses() {
 }
 
 // TODO: Read and return the number of running processes
-int LinuxParser::RunningProcesses() { 
+int LinuxParser::RunningProcesses() {
   string line;
   string key, value;
   long running;
@@ -237,31 +237,46 @@ int LinuxParser::RunningProcesses() {
       }
     }
   }
-  return running; }
+  return running;
+}
 
 // TODO: Read and return the command associated with a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::Command(int pid) { 
+string LinuxParser::Command(int pid) {
   string line;
   std::fstream stream{kProcDirectory + to_string(pid) + kCmdlineFilename};
   if (stream.is_open()) {
     std::getline(stream, line);
   }
   return line;
- }
+}
 
 // TODO: Read and return the memory used by a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::Ram(int pid [[maybe_unused]]) { return string(); }
+string LinuxParser::Ram(int pid) {
+  string line;
+  string key, value;
+
+  std::fstream stream{kProcDirectory + to_string(pid) + kStatFilename};
+  if (stream.is_open()) {
+    while (std::getline(stream, line)) {
+      std::istringstream linestream{line};
+      linestream >> key >> value;
+      if (key == "VmSize:")
+        break;
+    }
+  }
+  return value;
+}
 
 // TODO: Read and return the user ID associated with a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::Uid(int pid [[maybe_unused]]) { return string(); }
+string LinuxParser::Uid(int pid) { return string(); }
 
 // TODO: Read and return the user associated with a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::User(int pid [[maybe_unused]]) { return string(); }
+string LinuxParser::User(int pid) { return string(); }
 
 // TODO: Read and return the uptime of a process
 // REMOVE: [[maybe_unused]] once you define the function
-long LinuxParser::UpTime(int pid [[maybe_unused]]) { return 0; }
+long LinuxParser::UpTime(int pid) { return 0; }
