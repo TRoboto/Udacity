@@ -256,17 +256,18 @@ string LinuxParser::Command(int pid) {
 string LinuxParser::Ram(int pid) {
   string line;
   string key, value;
-
+  long memory;
   std::fstream stream{kProcDirectory + to_string(pid) + kStatFilename};
   if (stream.is_open()) {
     while (std::getline(stream, line)) {
       std::istringstream linestream{line};
       linestream >> key >> value;
       if (key == "VmSize:")
+        memory = stof(value) * 0.001; // convert from kb to mb
         break;
     }
   }
-  return value;
+  return to_string(memory);
 }
 
 // TODO: Read and return the user ID associated with a process
