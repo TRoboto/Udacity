@@ -104,6 +104,9 @@ long LinuxParser::UpTime() {
 
 // TODO: Read and return the number of jiffies for the system
 long LinuxParser::Jiffies() {
+  // we can use
+  // return LinuxParser::ActiveJiffies() + LinuxParser::IdleJiffies();
+  // but this is faster as we read the file once.
   string line;
   string cpu;
   string sUser, sNice, sSystem, sIdle, sIOwait, sIRQ, sSoftIRQ, sSteal, sGuest,
@@ -128,10 +131,42 @@ long LinuxParser::Jiffies() {
 long LinuxParser::ActiveJiffies(int pid [[maybe_unused]]) { return 0; }
 
 // TODO: Read and return the number of active jiffies for the system
-long LinuxParser::ActiveJiffies() { return 0; }
+long LinuxParser::ActiveJiffies() {
+  string line;
+  string cpu;
+  string sUser, sNice, sSystem, sIdle, sIOwait, sIRQ, sSoftIRQ, sSteal, sGuest,
+      sGuestNice;
+  long jiffies;
+  std::fstream stream{kProcDirectory + kStatFilename};
+  if (stream.is_open()) {
+    std::getline(stream, line);
+    std::istringstream linestream{line};
+    linestream >> cpu >> sUser >> sNice >> sSystem >> sIdle >> sIOwait >>
+        sIRQ >> sSoftIRQ >> sSteal >> sGuest >> sGuestNice;
+    jiffies = std::stol(sUser) + std::stol(sNice) + std::stol(sSystem) +
+              std::stol(sIRQ) + std::stol(sSoftIRQ) + std::stol(sSteal) +
+              std::stol(sGuest) + std::stol(sGuestNice);
+  }
+  return jiffies;
+}
 
 // TODO: Read and return the number of idle jiffies for the system
-long LinuxParser::IdleJiffies() { return 0; }
+long LinuxParser::IdleJiffies() {
+  string line;
+  string cpu;
+  string sUser, sNice, sSystem, sIdle, sIOwait, sIRQ, sSoftIRQ, sSteal, sGuest,
+      sGuestNice;
+  long jiffies;
+  std::fstream stream{kProcDirectory + kStatFilename};
+  if (stream.is_open()) {
+    std::getline(stream, line);
+    std::istringstream linestream{line};
+    linestream >> cpu >> sUser >> sNice >> sSystem >> sIdle >> sIOwait >>
+        sIRQ >> sSoftIRQ >> sSteal >> sGuest >> sGuestNice;
+    jiffies = std::stol(sIdle) + std::stol(sIOwait);
+  }
+  return jiffies;
+}
 
 // TODO: Read and return CPU utilization
 vector<string> LinuxParser::CpuUtilization() { return {}; }
