@@ -186,7 +186,21 @@ long LinuxParser::IdleJiffies() {
 }
 
 // TODO: Read and return CPU utilization
-vector<string> LinuxParser::CpuUtilization() { return {}; }
+vector<string> LinuxParser::CpuUtilization() {
+  vector<string> vCpuUtilization;
+  long lPrevIdle = IdleJiffies();
+  long lPrevActive = ActiveJiffies();
+  long lPrevTotal = lPrevActive + lPrevIdle;
+  sleep(10);
+  long lIdle = IdleJiffies();
+  long lActive = ActiveJiffies();
+  long lTotal = lIdle + lActive;
+
+  long total = lTotal - lPrevTotal;
+  long idle = lIdle - lPrevIdle;
+  vCpuUtilization.push_back(to_string((total - idle) / total));
+  return vCpuUtilization;
+}
 
 // TODO: Read and return the total number of processes
 int LinuxParser::TotalProcesses() { return 0; }
