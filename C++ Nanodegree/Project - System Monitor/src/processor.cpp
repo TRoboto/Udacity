@@ -15,7 +15,7 @@ float Processor::Utilization() {
   iAll_ = LinuxParser::Jiffies();
   iIdle_ = LinuxParser::IdleJiffies();
 
-  float rValue =
+  float value =
       (((iAll_ - fAllOld) - (iIdle_ - fIdleOld)) / (iAll_ - fAllOld));
-  return (rValue > 0.0) ? rValue : 0.0;
+  return (value > 0.0) ? value : 0.0;
 }

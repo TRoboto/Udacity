@@ -8,8 +8,8 @@ class Processor {
 
   // TODO: Declare any necessary private members
  private:
-  int iAll_;
-  int iIdle_;
+  long iAll_;
+  long iIdle_;
 };
 
 #endif

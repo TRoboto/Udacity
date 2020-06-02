@@ -13,24 +13,25 @@ using std::string;
 using std::to_string;
 using std::vector;
 
-Process::Process(int pid) {
-  pid_ = pid;
-  iAll_ = LinuxParser::Jiffies();
-  iActive_ = LinuxParser::ActiveJiffies(pid);
-}
+Process::Process(int pid) : pid_(pid) {}
 // TODO: Return this process's ID
 int Process::Pid() { return pid_; }
 
 // TODO: Return this process's CPU utilization
-float Process::CpuUtilization() {
-  float fAllOld = iAll_;
-  float fActiveOld = iActive_;
+// void Process::CpuInitialization(long iActive, long iAll) {
 
-  iAll_ = LinuxParser::Jiffies();
-  iActive_ = LinuxParser::ActiveJiffies(Pid());
+//   cpu_ = float((iActive - iActive_)) / (iAll - iAll_);
 
-  cpu_ = (fActiveOld - iActive_) / (fAllOld - iAll_);
-  return cpu_;
+//   iAll_ = iAll;
+//   iActive_ = iActive;
+// }
+void Process::CpuInitialization() {
+  long total_time = LinuxParser::ActiveJiffies(Pid());
+  float seconds = LinuxParser::UpTime() - UpTime();
+  if (seconds != 0)
+    cpu_ = total_time / sysconf(_SC_CLK_TCK) / seconds;
+  else
+    cpu_ = 0;
 }
 
 float Process::CpuUtilization() const { return cpu_; }
@@ -50,5 +51,5 @@ long int Process::UpTime() { return LinuxParser::UpTime(Pid()); }
 // TODO: Overload the "less than" comparison operator for Process objects
 // REMOVE: [[maybe_unused]] once you define the function
 bool Process::operator<(Process const& a) const {
-  return CpuUtilization() < a.CpuUtilization();
+  return CpuUtilization() > a.CpuUtilization();
 }
