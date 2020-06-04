@@ -18,8 +18,6 @@ private:
     GraphNode *_rootNode;
     ChatLogic *_chatLogic;
 
-    std::string _filename;
-
     // proprietary functions
     int ComputeLevenshteinDistance(std::string s1, std::string s2);
 
