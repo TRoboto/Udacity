@@ -26,8 +26,10 @@ ChatBot::ChatBot(std::string filename)
     _chatLogic = nullptr;
     _rootNode = nullptr;
 
+    _filename = filename;
+
     // load image into heap memory
-    _image = new wxBitmap(filename, wxBITMAP_TYPE_PNG);
+    _image = new wxBitmap(_filename, wxBITMAP_TYPE_PNG);
 }
 
 ChatBot::~ChatBot()
@@ -44,7 +46,65 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 ////
+ChatBot::ChatBot(const ChatBot &source){
 
+    std::cout << "ChatBot Copy Constructor" << std::endl;
+
+    _image = new wxBitmap(*source._image);
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+}
+
+ChatBot::ChatBot(ChatBot &&source){
+
+    std::cout << "ChatBot Move Constructor" << std::endl;
+
+    _image = source._image;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+    source._rootNode = nullptr;
+    source._chatLogic = nullptr;
+    source._image = NULL;
+
+}
+
+ChatBot  &ChatBot::operator=(const ChatBot &source){
+    
+    std::cout << "ChatBot Copy Assignment Operrator" << std::endl;
+    
+    if (this == &source)
+        return *this;
+    
+    delete _image;
+
+    _image = new wxBitmap(*source._image);
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+    return *this;
+}
+
+ChatBot  &ChatBot::operator=(ChatBot &&source){
+    
+    std::cout << "ChatBot Move Assignment Operator" << std::endl;
+    
+    if (this == &source)
+        return *this;
+    
+    delete _image;
+
+    _image = source._image;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+
+    source._rootNode = nullptr;
+    source._chatLogic = nullptr;
+    source._image = NULL;
+
+    return *this;
+}
 ////
 //// EOF STUDENT CODE
 
