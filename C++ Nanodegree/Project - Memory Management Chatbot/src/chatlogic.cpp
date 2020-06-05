@@ -127,12 +127,12 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                         ////
 
                         // check if node with this ID exists already
-                        auto newNode = std::find_if(_nodes.begin(), _nodes.end(), [&id](std::make_unique<GraphNode>& node) { return node->GetID() == id; });
+                        auto newNode = std::find_if(_nodes.begin(), _nodes.end(), [&id](std::unique_ptr<GraphNode>& node) { return node->GetID() == id; });
 
                         // create new element if ID does not yet exist
                         if (newNode == _nodes.end())
                         {
-                            _nodes.emplace_back(std::unique_ptr<GraphNode(id)>(id));
+                            _nodes.emplace_back(std::make_unique<GraphNode>(id));
                             newNode = _nodes.end() - 1; // get iterator to last element
                             // add all answers to current node
                             AddAllTokensToElement("ANSWER", tokens, **newNode);
@@ -160,8 +160,8 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
                             // create new edge
                             auto edge = std::make_unique<GraphEdge>(id);
-                            edge->SetChildNode(*childNode->get());
-                            edge->SetParentNode(*parentNode)->get();
+                            edge->SetChildNode((*childNode).get());
+                            edge->SetParentNode((*parentNode).get());
                             // _edges.push_back(edge);
 
                             // find all keywords for current node
@@ -205,7 +205,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
             if (rootNode == nullptr)
             {
-                rootNode = *it->get(); // assign current node to root
+                rootNode = (*it).get(); // assign current node to root
             }
             else
             {
@@ -219,9 +219,9 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     SetChatbotHandle(&chatbot);
 
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-    chatbot->SetChatLogicHandle(this);
+    chatbot.SetChatLogicHandle(this);
     // add chatbot to graph root node
-    chatbot->SetRootNode(rootNode);
+    chatbot.SetRootNode(rootNode);
     rootNode->MoveChatbotHere(std::move(chatbot));
     
     ////
