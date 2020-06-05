@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -std=c++17 -pthread   CMakeFiles/membot.dir/src/chatbot.cpp.o CMakeFiles/membot.dir/src/chatgui.cpp.o CMakeFiles/membot.dir/src/chatlogic.cpp.o CMakeFiles/membot.dir/src/graphedge.cpp.o CMakeFiles/membot.dir/src/graphnode.cpp.o  -o membot -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk2u_core-3.0 -lwx_baseu-3.0 
