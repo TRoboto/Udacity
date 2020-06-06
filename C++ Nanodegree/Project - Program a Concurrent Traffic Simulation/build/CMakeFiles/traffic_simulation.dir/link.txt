@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\traffic_simulation.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\traffic_simulation.dir/objects.a @CMakeFiles\traffic_simulation.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -std=c++17 -pthread -g   -Wl,--whole-archive CMakeFiles\traffic_simulation.dir/objects.a -Wl,--no-whole-archive  -o traffic_simulation.exe -Wl,--out-implib,libtraffic_simulation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\traffic_simulation.dir\linklibs.rsp

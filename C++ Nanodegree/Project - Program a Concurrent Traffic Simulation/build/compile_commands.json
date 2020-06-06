@@ -1,0 +1,37 @@
+[
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\Graphics.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\Graphics.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\Intersection.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\Intersection.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\Street.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\Street.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\TrafficLight.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\TrafficLight.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\TrafficObject.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\TrafficObject.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\TrafficSimulator-Final.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\TrafficSimulator-Final.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficSimulator-Final.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   @CMakeFiles/traffic_simulation.dir/includes_CXX.rsp -std=c++17 -pthread -g   -o CMakeFiles\\traffic_simulation.dir\\src\\Vehicle.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Project - Program a Concurrent Traffic Simulation\\src\\Vehicle.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.cpp"
+}
+]
