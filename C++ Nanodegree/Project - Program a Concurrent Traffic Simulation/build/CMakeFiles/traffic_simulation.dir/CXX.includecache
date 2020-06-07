@@ -1038,20 +1038,6 @@ C:/OpenCV-MinGW-Build-OpenCV-4.1.1-x64/include/opencv2/videoio.hpp
 opencv2/core.hpp
 C:/OpenCV-MinGW-Build-OpenCV-4.1.1-x64/include/opencv2/opencv2/core.hpp
 
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.cpp
-iostream
--
-opencv2/core.hpp
--
-opencv2/imgproc.hpp
--
-opencv2/highgui.hpp
--
-Graphics.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.h
-Intersection.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
-
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.h
 string
 -
@@ -1061,24 +1047,6 @@ opencv2/core.hpp
 -
 TrafficObject.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
-
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.cpp
-iostream
--
-thread
--
-chrono
--
-future
--
-random
--
-Street.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
-Intersection.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
-Vehicle.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
 vector
@@ -1094,29 +1062,9 @@ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Si
 TrafficLight.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
 
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.cpp
-iostream
--
-Vehicle.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
-Intersection.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
-Street.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
-
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
 TrafficObject.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
-
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.cpp
-iostream
--
-random
--
-future
--
-TrafficLight.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
 mutex
@@ -1151,18 +1099,6 @@ Intersection.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
 Graphics.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.h
-
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.cpp
-iostream
--
-random
--
-Street.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
-Intersection.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
-Vehicle.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 TrafficObject.h
