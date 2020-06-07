@@ -103,17 +103,20 @@ CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.cpp
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
+ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.cpp
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
+ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.cpp
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
+ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.obj
@@ -225,12 +228,14 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Graphics.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
+ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficSimulator-Final.cpp
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Intersection.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Street.h
+ J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficLight.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/TrafficObject.h
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.cpp
  J:/GitHub repos/Udacity/C++ Nanodegree/Project - Program a Concurrent Traffic Simulation/src/Vehicle.h

@@ -102,17 +102,20 @@ CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: C:/OpenCV-MinGW-Build-Op
 CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: ../src/Graphics.cpp
 CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: ../src/Graphics.h
 CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: ../src/Intersection.h
+CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: ../src/TrafficLight.h
 CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.obj: ../src/TrafficObject.h
 
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/Intersection.cpp
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/Intersection.h
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/Street.h
+CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/TrafficLight.h
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/TrafficObject.h
 CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.obj: ../src/Vehicle.h
 
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/Intersection.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/Street.cpp
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/Street.h
+CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/TrafficLight.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/TrafficObject.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.obj: ../src/Vehicle.h
 
@@ -224,12 +227,14 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: C:/OpenCV-
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/Graphics.h
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/Intersection.h
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/Street.h
+CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/TrafficLight.h
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/TrafficObject.h
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/TrafficSimulator-Final.cpp
 CMakeFiles/traffic_simulation.dir/src/TrafficSimulator-Final.cpp.obj: ../src/Vehicle.h
 
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/Intersection.h
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/Street.h
+CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/TrafficLight.h
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/TrafficObject.h
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/Vehicle.cpp
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.obj: ../src/Vehicle.h
