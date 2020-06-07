@@ -70,8 +70,9 @@ void TrafficLight::cycleThroughPhases()
         std::chrono::duration<double, std::milli> duration = std::chrono::system_clock::now() - startTime;
 
         auto to_send = _currentPhase;
-        // auto msg = std::async(std::launch::async, &MessageQueue<TrafficLight>::send,
-        // &_trafficLightQueue, std::move(to_send))
+        auto msg = std::async(std::launch::async, &MessageQueue<TrafficLightPhase>::send, &_messageQueue, std::move(to_send));
+        msg.wait();
+
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     
