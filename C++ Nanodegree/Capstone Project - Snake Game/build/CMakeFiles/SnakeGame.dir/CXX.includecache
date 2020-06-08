@@ -596,14 +596,6 @@ C:/MinGW/include/SDL2/begin_code.h
 close_code.h
 C:/MinGW/include/SDL2/close_code.h
 
-C:/MinGW/include/SDL2/SDL_ttf.h
-SDL.h
-C:/MinGW/include/SDL2/SDL.h
-begin_code.h
-C:/MinGW/include/SDL2/begin_code.h
-close_code.h
-C:/MinGW/include/SDL2/close_code.h
-
 C:/MinGW/include/SDL2/SDL_version.h
 SDL_stdinc.h
 C:/MinGW/include/SDL2/SDL_stdinc.h
@@ -630,35 +622,19 @@ C:/MinGW/include/SDL2/begin_code.h
 
 C:/MinGW/include/SDL2/close_code.h
 
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
-random
--
-SDL.h
--
-vector
--
-
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.cpp
-renderer.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.h
-obstacle.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/controller.cpp
+controller.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/controller.h
 iostream
--
-string
--
-
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.h
-vector
 -
 SDL.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/SDL.h
-SDL_ttf.h
--
 snake.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
-obstacle.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
+
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/controller.h
+snake.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
 vector

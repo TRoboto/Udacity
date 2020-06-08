@@ -24,7 +24,7 @@ void Controller::HandleInput(bool &running, bool &pause, Snake &snake) const
     {
       switch (e.key.keysym.sym)
       {
-      case SDL_KeyCode::SDLK_ESCAPE:
+      case SDLK_ESCAPE:
         pause = !pause;
         break;
 
