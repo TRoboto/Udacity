@@ -1,6 +1,9 @@
-# CPPND: Capstone Snake Game Example
+# CPPND: Capstone Snake Game
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This is an extended verion of the starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). I have added the following features:
+* Ability to pause/resume the game.
+* Random obstacles with the ability to change every time a player eats the food.
+* A GUI to let the player know how to start, resume and pause the game.
 
 <img src="snake_game.gif"/>
 
@@ -18,6 +21,8 @@ In this project, you can build your own C++ application or extend this Snake gam
 * SDL2 >= 2.0
   * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
   * Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source.
+* SDL_ttf >= 2.0
+  * All installation instructions can be found [here](https://www.libsdl.org/projects/SDL_ttf/)
 * gcc/g++ >= 5.4
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
@@ -29,3 +34,13 @@ In this project, you can build your own C++ application or extend this Snake gam
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
+
+## Meets Rubric
+
+1. The project demonstrates an understanding of C++ functions and control structures.
+2. The project uses Object Oriented Programming techniques.
+3. Classes use appropriate access specifiers for class members.
+4. Class constructors utilize member initialization lists.
+5. Classes abstract implementation details from their interfaces.
+6. Classes encapsulate behavior.
+7. The project makes use of references in function declarations.
