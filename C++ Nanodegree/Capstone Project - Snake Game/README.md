@@ -5,7 +5,7 @@ This is an extended verion of the starter repo for the Capstone project in the [
 * Random obstacles with the ability to change every time a player eats the food.
 * A GUI to let the player know how to start, resume and pause the game.
 
-<img src="snake_game.gif"/>
+<img src="snake_game.gif" />
 
 The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 
