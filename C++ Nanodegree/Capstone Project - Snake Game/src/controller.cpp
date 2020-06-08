@@ -11,7 +11,7 @@ void Controller::ChangeDirection(Snake &snake, Snake::Direction input,
   return;
 }
 
-void Controller::HandleInput(bool &running, Snake &snake) const
+void Controller::HandleInput(bool &running, bool &pause, Snake &snake) const
 {
   SDL_Event e;
   while (SDL_PollEvent(&e))
@@ -24,6 +24,10 @@ void Controller::HandleInput(bool &running, Snake &snake) const
     {
       switch (e.key.keysym.sym)
       {
+      case SDL_KeyCode::SDLK_ESCAPE:
+        pause = !pause;
+        break;
+
       case SDLK_UP:
         ChangeDirection(snake, Snake::Direction::kUp,
                         Snake::Direction::kDown);
