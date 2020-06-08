@@ -626,6 +626,14 @@ J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/control
 snake.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
 
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/game.cpp
+game.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/game.h
+iostream
+-
+SDL.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/SDL.h
+
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/game.h
 random
 -
@@ -637,16 +645,16 @@ renderer.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.h
 snake.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
+obstacle.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
 
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/main.cpp
-iostream
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
+random
 -
-controller.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/controller.h
-game.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/game.h
-renderer.h
-J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.h
+SDL.h
+-
+vector
+-
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.h
 vector
@@ -655,6 +663,8 @@ SDL.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/SDL.h
 snake.h
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
+obstacle.h
+J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.h
 
 J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.h
 vector

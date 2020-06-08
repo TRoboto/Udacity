@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SnakeGame.dir/src/controller.cpp.obj"
   "CMakeFiles/SnakeGame.dir/src/game.cpp.obj"
   "CMakeFiles/SnakeGame.dir/src/main.cpp.obj"
+  "CMakeFiles/SnakeGame.dir/src/obstacle.cpp.obj"
   "CMakeFiles/SnakeGame.dir/src/renderer.cpp.obj"
   "CMakeFiles/SnakeGame.dir/src/snake.cpp.obj"
   "SnakeGame.exe"

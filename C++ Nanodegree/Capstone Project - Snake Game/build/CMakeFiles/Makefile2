@@ -93,12 +93,12 @@ clean: CMakeFiles/SnakeGame.dir/clean
 CMakeFiles/SnakeGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="J:\GitHub repos\Udacity\C++ Nanodegree\Capstone Project - Snake Game\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target SnakeGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="J:\GitHub repos\Udacity\C++ Nanodegree\Capstone Project - Snake Game\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target SnakeGame"
 .PHONY : CMakeFiles/SnakeGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SnakeGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "J:\GitHub repos\Udacity\C++ Nanodegree\Capstone Project - Snake Game\build\CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "J:\GitHub repos\Udacity\C++ Nanodegree\Capstone Project - Snake Game\build\CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SnakeGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "J:\GitHub repos\Udacity\C++ Nanodegree\Capstone Project - Snake Game\build\CMakeFiles" 0
 .PHONY : CMakeFiles/SnakeGame.dir/rule

@@ -223,6 +223,33 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/obstacle.obj: src/obstacle.cpp.obj
+
+.PHONY : src/obstacle.obj
+
+# target to build an object file
+src/obstacle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/obstacle.cpp.obj
+.PHONY : src/obstacle.cpp.obj
+
+src/obstacle.i: src/obstacle.cpp.i
+
+.PHONY : src/obstacle.i
+
+# target to preprocess a source file
+src/obstacle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/obstacle.cpp.i
+.PHONY : src/obstacle.cpp.i
+
+src/obstacle.s: src/obstacle.cpp.s
+
+.PHONY : src/obstacle.s
+
+# target to generate assembly for a file
+src/obstacle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SnakeGame.dir\build.make CMakeFiles/SnakeGame.dir/src/obstacle.cpp.s
+.PHONY : src/obstacle.cpp.s
+
 src/renderer.obj: src/renderer.cpp.obj
 
 .PHONY : src/renderer.obj
@@ -295,6 +322,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/obstacle.obj
+	@echo ... src/obstacle.i
+	@echo ... src/obstacle.s
 	@echo ... src/renderer.obj
 	@echo ... src/renderer.i
 	@echo ... src/renderer.s
