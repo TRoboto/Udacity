@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "SDL.h"
+#include <SDL_ttf.h>
 #include "snake.h"
 #include "obstacle.h"
 
@@ -13,7 +14,8 @@ public:
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
 
-  void Render(Snake const snake, SDL_Point const &food, Obstacle const &obst);
+  void RenderGame(Snake const snake, SDL_Point const &food, Obstacle const &obst);
+  void RenderText(std::string text);
   void UpdateWindowTitle(int score, int fps);
 
 private:

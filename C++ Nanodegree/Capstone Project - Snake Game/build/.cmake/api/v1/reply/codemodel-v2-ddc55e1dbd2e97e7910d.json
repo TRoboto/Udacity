@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SnakeGame::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SnakeGame-8f7abc98c7c8fb5e9d88.json",
+					"jsonFile" : "target-SnakeGame-Debug-7956b8b8c3262bf478c4.json",
 					"name" : "SnakeGame",
 					"projectIndex" : 0
 				}

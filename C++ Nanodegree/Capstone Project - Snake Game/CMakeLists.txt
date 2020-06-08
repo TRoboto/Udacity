@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.7)
 add_definitions(-std=c++17)
 
 set(CXX_FLAGS "-Wall")
-set(CMAKE_CXX_FLAGS, "${CXX_FLAGS} -lmingw32 -lSDL2main -lSDL2")
+set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(SDL2Test)
 
@@ -14,4 +14,4 @@ include_directories(${SDL2_INCLUDE_DIRS} C:/MinGW/include/SDL2)
 
 add_executable(SnakeGame src/main.cpp src/game.cpp src/controller.cpp src/renderer.cpp src/snake.cpp src/obstacle.cpp)
 string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES)
-target_link_libraries(SnakeGame ${SDL2_LIBRARIES})
+target_link_libraries(SnakeGame ${SDL2_LIBRARIES} SDL2_ttf)

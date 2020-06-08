@@ -24,8 +24,9 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   Uint32 frame_duration;
   int frame_count = 0;
   bool running = true;
-  bool pause = false;
+  bool pause = true;
 
+  renderer.RenderGame(snake, food, obstacle);
   while (running)
   {
     frame_start = SDL_GetTicks();
@@ -35,8 +36,13 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     if (!pause)
     {
       Update();
-      renderer.Render(snake, food, obstacle);
+      renderer.RenderGame(snake, food, obstacle);
     }
+    else
+    {
+      renderer.RenderText("Press ESC to start the game\nOR\nPress ESC to pause/resume the game.");
+    }
+    
 
     frame_end = SDL_GetTicks();
 

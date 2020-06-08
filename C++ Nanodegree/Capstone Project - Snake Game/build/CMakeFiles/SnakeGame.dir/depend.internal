@@ -94,6 +94,7 @@ CMakeFiles/SnakeGame.dir/src/game.cpp.obj
  C:/MinGW/include/SDL2/SDL_thread.h
  C:/MinGW/include/SDL2/SDL_timer.h
  C:/MinGW/include/SDL2/SDL_touch.h
+ C:/MinGW/include/SDL2/SDL_ttf.h
  C:/MinGW/include/SDL2/SDL_version.h
  C:/MinGW/include/SDL2/SDL_video.h
  C:/MinGW/include/SDL2/begin_code.h
@@ -147,6 +148,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.obj
  C:/MinGW/include/SDL2/SDL_thread.h
  C:/MinGW/include/SDL2/SDL_timer.h
  C:/MinGW/include/SDL2/SDL_touch.h
+ C:/MinGW/include/SDL2/SDL_ttf.h
  C:/MinGW/include/SDL2/SDL_version.h
  C:/MinGW/include/SDL2/SDL_video.h
  C:/MinGW/include/SDL2/begin_code.h
@@ -249,6 +251,7 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.obj
  C:/MinGW/include/SDL2/SDL_thread.h
  C:/MinGW/include/SDL2/SDL_timer.h
  C:/MinGW/include/SDL2/SDL_touch.h
+ C:/MinGW/include/SDL2/SDL_ttf.h
  C:/MinGW/include/SDL2/SDL_version.h
  C:/MinGW/include/SDL2/SDL_video.h
  C:/MinGW/include/SDL2/begin_code.h

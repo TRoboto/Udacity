@@ -1,0 +1,32 @@
+[
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\main.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\main.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/main.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\game.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\game.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/game.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\controller.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\controller.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/controller.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\renderer.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\renderer.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/renderer.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\snake.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\snake.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/snake.cpp"
+},
+{
+  "directory": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/SnakeGame.dir/includes_CXX.rsp -g   -std=c++17 -o CMakeFiles\\SnakeGame.dir\\src\\obstacle.cpp.obj -c \"J:\\GitHub repos\\Udacity\\C++ Nanodegree\\Capstone Project - Snake Game\\src\\obstacle.cpp\"",
+  "file": "J:/GitHub repos/Udacity/C++ Nanodegree/Capstone Project - Snake Game/src/obstacle.cpp"
+}
+]

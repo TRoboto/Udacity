@@ -1,1 +1,1 @@
- -L/opt/local/x86_64-w64-mingw32/lib  -lmingw32 -lSDL2main -lSDL2 -mwindows -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ -L/opt/local/x86_64-w64-mingw32/lib  -lmingw32 -lSDL2main -lSDL2 -mwindows -lSDL2_ttf -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

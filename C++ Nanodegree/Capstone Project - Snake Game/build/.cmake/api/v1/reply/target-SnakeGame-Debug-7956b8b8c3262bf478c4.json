@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "  -std=c++17"
+					"fragment" : "-g   -std=c++17"
 				}
 			],
 			"includes" : 
@@ -84,12 +84,21 @@
 		"commandFragments" : 
 		[
 			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
 				"fragment" : "",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-L/opt/local/x86_64-w64-mingw32/lib  -lmingw32 -lSDL2main -lSDL2 -mwindows",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lSDL2_ttf",
 				"role" : "libraries"
 			},
 			{
