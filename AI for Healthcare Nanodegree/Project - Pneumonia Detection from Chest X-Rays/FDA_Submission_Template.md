@@ -63,7 +63,7 @@ The base network is VGG-16 pretrained on ImageNet dataset, followed by:
 
 <img src="auc.png" />
 
-<img src="pc.png" />
+<img src="pr.png" />
 
 **Final Threshold and Explanation:**  
 The final threshold is 0.41 because it gives the highest precision
@@ -96,7 +96,8 @@ The labels are obtained using NLP approach from the radiologist reports. They ar
 
 ### 6. FDA Validation Plan
 
-**Patient Population Description for FDA Validation Dataset:**
+**Patient Population Description for FDA Validation Dataset:**  
+The sample should be taken from men and women aged 1 to 85 years. The sample can include people with previous lung diseases. X-rays should be for chest only.
 
 **Ground Truth Acquisition Methodology:**  
 X-ray images validated be 3 different radiologists.
