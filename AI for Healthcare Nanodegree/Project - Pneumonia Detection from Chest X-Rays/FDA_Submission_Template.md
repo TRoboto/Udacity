@@ -22,25 +22,25 @@ The algorithm is designed for high precision predictions. This means that when t
 
 ### 2. Algorithm Design and Function
 
-The algorithms uses deep neural network, spcificly VGG-16 architacture to classify the presece of pnuemonia from xray images. The flow starts with image prepcossing where all images are normalized, then the image is fed to the neural network and the network outputs a probability of having pneumonia. If the output probabilty is higher than a predefined threshold, it is classified as positive.
+The algorithms uses a deep neural network, specifically VGG-16 architecture to classify the presence of pneumonia from x-ray images. The flow starts with image preprocessing where all images are normalized, then the image is fed to the neural network and the network outputs a probability of having pneumonia. If the output probability is higher than a predefined threshold, it is classified as positive.
 
 **DICOM Checking Steps:**  
 It is guaranteed that DICOM only contains chest x-rays.  
 
 **Preprocessing Steps:**  
-ِImages are resized to 224x224, converted to RGB color channels and normalized to range of [0,1]
+ِImages are resized to 224x224, converted to RGB color channels and normalized to the range of [0,1]
 
 **CNN Architecture:**
-The base network is VGG-16 pretrained on ImageNet dataset, followed by:
+The base network is VGG-16 pre-trained on ImageNet dataset, followed by:
 * Batch Normalization
-* Conv2d layer with 1x1 kernal, 1024 filters, stride of 1 and relu activation fucntion.
+* Conv2d layer with 1x1 kernal, 1024 filters, stride of 1, and relu activation function.
 * Dropout of 0.5
 * Batch Normalization
-* Conv2d layer with 1x1 kernal, 256 filters, stride of 1 and relu activation fucntion.
+* Conv2d layer with 1x1 kernal, 256 filters, stride of 1, and relu activation function.
 * Dropout of 0.5
 * 7x7 AveragePooling2D layer
 * Batch Normalization
-* Conv2d layer with 1x1 kernal, 1 filter, stride of 1 and signmoid activation fucntion.
+* Conv2d layer with 1x1 kernal, 1 filter, stride of 1, and sigmoid activation function.
 * Reshape to [batch_size, 1]
 
 ### 3. Algorithm Training
@@ -70,7 +70,7 @@ The final threshold is 0.41 because it gives the highest precision
 
 ### 4. Databases
 
-The dataset is obtained from [Kaggle](https://www.kaggle.com/nih-chest-xrays/data). The dataset contians 112,120 chest xray images with 1024x1024 resolution. It contains 14 diseases: atelectasis, heart enlargement, standardization, edema, effusion, emphysema, fibrosis, hernia, infiltration, mass, Creed, pleura thickening, pneumothorax and pneumonia. The figure below shows their distribution. It is to be noted that an image may contain multiple diseases.
+The dataset is obtained from [Kaggle](https://www.kaggle.com/nih-chest-xrays/data). The dataset contains 112,120 chest x-ray images with 1024x1024 resolution. It contains 14 diseases: atelectasis, heart enlargement, standardization, edema, effusion, emphysema, fibrosis, hernia, infiltration, mass, Creed, pleura thickening, pneumothorax, and pneumonia. The figure below shows their distribution. It is to be noted that an image may contain multiple diseases.
 
 <img src="dis_dis.png" />
 
@@ -78,7 +78,7 @@ The age distribution for people with pneumonia is presented below.
 
 <img src="age.png" />
 
-There are 1431 samples with pnuemonia and 110689 samples without pnuemonia in the dataset. The gender distribution is shown below with 56.5% male and 43.5% female.
+There are 1431 samples with pneumonia and 110689 samples without pneumonia in the dataset. The gender distribution is shown below with 56.5% male and 43.5% female.
 
 <img src="sex.png" />
 
@@ -91,7 +91,7 @@ The training dataset is resampled with replacement to have 50% positive cases of
 The validation set has 20% positive cases of pneumonia and 80% with no pneumonia. The total number of images in the validation set is 1430 images.
 
 ### 5. Ground Truth
-The labels are obtained using NLP approach from the radiologist reports. They are expected to be accurate enough.
+The labels are obtained using an NLP approach from the radiologist reports. They are expected to be accurate enough.
 
 
 ### 6. FDA Validation Plan
@@ -100,7 +100,7 @@ The labels are obtained using NLP approach from the radiologist reports. They ar
 The sample should be taken from men and women aged 1 to 85 years. The sample can include people with previous lung diseases. X-rays should be for chest only.
 
 **Ground Truth Acquisition Methodology:**  
-X-ray images validated be 3 different radiologists.
+X-ray images are validated by 3 different radiologists.
 
 **Algorithm Performance Standard:**  
 Precision
