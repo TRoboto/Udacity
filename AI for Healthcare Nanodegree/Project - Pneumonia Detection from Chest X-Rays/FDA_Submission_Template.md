@@ -63,7 +63,7 @@ The base network is VGG-16 pretrained on ImageNet dataset, followed by:
 
 <img src="auc.png" />
 
-<img src="pc.png" />
+<img src="pr.png" />
 
 **Final Threshold and Explanation:**  
 The final threshold is 0.41 because it gives the highest precision
