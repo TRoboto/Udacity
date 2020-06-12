@@ -22,7 +22,7 @@ The algorithm is designed for high recall predictions. This means that when the 
 
 ### 2. Algorithm Design and Function
 
-The algorithms uses a deep neural network, specifically ResNet50 architecture to classify the presence of pneumonia from x-ray images. The flow starts with image preprocessing where all images are normalized, then the image is fed to the neural network and the network outputs a probability of having pneumonia. If the output probability is higher than a predefined threshold, it is classified as positive.
+The algorithms uses a deep neural network, specifically VGG16 architecture to classify the presence of pneumonia from x-ray images. The flow starts with image preprocessing where all images are normalized, then the image is fed to the neural network and the network outputs a probability of having pneumonia. If the output probability is higher than a predefined threshold, it is classified as positive.
 
 **DICOM Checking Steps:**  
 It is guaranteed that DICOM only contains the following:
@@ -34,17 +34,12 @@ It is guaranteed that DICOM only contains the following:
 ِImages are resized to 224x224, converted to RGB color channels and normalized to the range of [0,1]
 
 **CNN Architecture:**
-The base network is ResNet50 pre-trained on ImageNet dataset, followed by:
-* Batch Normalization
-* Conv2d layer with 1x1 kernal, 1024 filters, stride of 1, and relu activation function.
-* Dropout of 0.5
-* Batch Normalization
-* Conv2d layer with 1x1 kernal, 256 filters, stride of 1, and relu activation function.
-* Dropout of 0.5
-* 7x7 AveragePooling2D layer
-* Batch Normalization
-* Conv2d layer with 1x1 kernal, 1 filter, stride of 1, and sigmoid activation function.
-* Reshape to [batch_size, 1]
+The base network is VGG16 pre-trained on ImageNet dataset, followed by:
+* Dense(1024 * 2, activation='relu')
+* Dropout(0.25)
+* Dense(1024, activation='relu')
+* Dropout(0.25)
+* Dense(1, activation='sigmoid')
 
 ### 3. Algorithm Training
 
@@ -58,8 +53,8 @@ The base network is ResNet50 pre-trained on ImageNet dataset, followed by:
     * Random zoom of (+/-)10% max.
 * Batch size = 64
 * Optimizer learning rate = 1e-4
-* Layers of pre-existing architecture that were frozen: None.
-* Layers of pre-existing architecture that were fine-tuned: All layers.
+* Layers of pre-existing architecture that were frozen: All VGG16 layers.
+* Layers of pre-existing architecture that were fine-tuned: All additional dense layers.
 * Layers added to pre-existing architecture: described above.
 
 <img src="loss.png" />
@@ -68,12 +63,39 @@ The base network is ResNet50 pre-trained on ImageNet dataset, followed by:
 
 <img src="pr.png" />
 
+<img src="f1.png" />
+
 The flowchart of the training process is shown below
 
 <img src="flow.png" />
 
+
+
+The hyper-parameters tuning process took me a lot of time. I started with the VGG16 model pre-trained on imagenet and did not freeze any layer. I trained it for 5 epochs and got an f1-score of 23%, which is not that good. I added the the following layers to the model and got 25% f1-score. I tuned many hyper-parameters including, but not limited to, learning rate, optimizer, number of filters and number of hidden units in the dense layers but the f1-score did not improve that much.
+* Batch Normalization
+* Conv2d layer with 1x1 kernal, 1024 filters, stride of 1, and relu activation function.
+* Dropout of 0.5
+* Batch Normalization
+* Conv2d layer with 1x1 kernal, 256 filters, stride of 1, and relu activation function.
+* Dropout of 0.5
+* 7x7 AveragePooling2D layer
+* Batch Normalization
+* Conv2d layer with 1x1 kernal, 1 filter, stride of 1, and sigmoid activation function.
+* Reshape to [batch_size, 1]
+
+I also tried a pre-trained VGG16 model with the following dense layers and got 36.6% f1-score.
+* Dense(1024 * 2, activation='relu')
+* Dropout(0.25)
+* Dense(1024, activation='relu')
+* Dropout(0.25)
+* Dense(1, activation='sigmoid')
+
+I then changed the base model to the ResNet50 pre-trained on imagenet and kept the above mentioned conv layers. I managed to get an f1-score of 34% after trying out many hyper-parameters as above. So, I stayed with model that achieved 36.6% f1-score.
+
 **Final Threshold and Explanation:**  
-The final threshold is 0.415 because it gives the highest f1-score
+The final threshold is 0.52 because it gives the highest f1-score.  
+
+We have to make a trade off between recall and precision. High recall means the model will correctly classify all positive cases. High precision means the model will accuratly classify positive cases, which means when the model classifies an image as a positive case, the image will probably be a positive case. However, If we get a high recall model, we will end up with many cases classified as positive. On the other hand, if we get a high precision model, we will end up missing positive cases. So, a trade off between these two is probability the best option.
 
 ### 4. Databases
 
@@ -107,10 +129,7 @@ The labels are obtained using an NLP approach from the radiologist reports. They
 The sample should be taken from men and women aged 1 to 85 years. The sample can include people with previous lung diseases. X-rays should be for chest only with DX modality.
 
 **Ground Truth Acquisition Methodology:**  
-X-ray images are validated by 3 different radiologists.
+X-ray images are validated by 3 different radiologists and an NLP approach, which refers to the silver standard.
 
 **Algorithm Performance Standard:**  
-Precision: 0.20471281296023564  
-Recall: 0.972027972027972  
-Threshold: 0.41545114  
-F1 Score: 0.3381995133819951  
+The model should be tested on f1-score and the minimum acceptable f1-score should be around 0.387 because I found the following paper states that the radiologists achieved on average an f1-score of 0.387.  https://arxiv.org/pdf/1711.05225.pdf
