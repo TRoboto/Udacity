@@ -32,4 +32,52 @@ import matplotlib.pyplot as plt
 path = f"volume"
 slices = [pydicom.dcmread(os.path.join(path, f)) for f in os.listdir(path)]
 
-# <YOUR CODE HERE>
+# What are the dimensions?
+print(f"{len(slices)} of size {slices[0].Rows}x{slices[0].Columns}")
+
+# What is the modality? 
+print(f"Modality: {slices[0].Modality}")
+
+# %%
+# What is the slice spacing?
+print(f"Pixel Spacing: {slices[0].PixelSpacing}, slice thickness: {slices[0].SliceThickness}")
+
+# Load into numpy array
+image_data = np.stack([s.pixel_array for s in slices])
+print(image_data.shape)
+
+# %%
+print("Saving axial: ")
+# Extract slice
+axial = image_data[image_data.shape[0]//2]
+plt.imshow(axial, cmap="gray")
+# Save using full-range window
+im = Image.fromarray((axial/np.max(axial)*0xff).astype(np.uint8), mode="L")
+im.save("axial.png")
+
+
+# %%
+print("Saving sagittal: ")
+# Extract slice
+sagittal = image_data[:,:, image_data.shape[2]//2]
+# Compute aspect ratio
+aspect = slices[0].SliceThickness / slices[0].PixelSpacing[0]
+print(sagittal.shape)
+plt.imshow(sagittal, cmap="gray", aspect = aspect)
+# Save using full-range window
+im = Image.fromarray((sagittal/np.max(sagittal)*0xff).astype(np.uint8), mode="L")
+im = im.resize((sagittal.shape[1], int(sagittal.shape[0] * aspect)))
+im.save("sagittal.png")
+
+# %%
+print("Saving coronal: ")
+# Extract slice
+coronal = image_data[:, image_data.shape[1]//2, :]
+# Compute aspect ratio
+aspect = slices[0].SliceThickness / slices[0].PixelSpacing[0]
+print(coronal.shape)
+plt.imshow(coronal, cmap="gray", aspect = aspect)
+# Save using full-range window
+im = Image.fromarray((coronal/np.max(coronal)*0xff).astype(np.uint8), mode="L")
+im = im.resize((coronal.shape[1], int(coronal.shape[0] * aspect)))
+im.save("coronal.png")
