@@ -60,5 +60,8 @@ class UNetInferenceAgent:
         # correct by running it on one of the volumes in your training set and comparing 
         # with the label in 3D Slicer.
         # <YOUR CODE HERE>
-
-        return # 
+        
+        outputs = self.model(torch.tensor(volume).type(torch.cuda.FloatTensor).unsqueeze(1).to(self.device)).cpu().detach()
+        _, slices = torch.max(outputs, 1)
+    
+        return slices.numpy()
