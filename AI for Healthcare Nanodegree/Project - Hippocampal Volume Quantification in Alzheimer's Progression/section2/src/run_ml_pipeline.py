@@ -5,6 +5,7 @@ import os
 import json
 
 from experiments.UNetExperiment import UNetExperiment
+from sklearn.model_selection import train_test_split
 from data_prep.HippocampusDatasetLoader import LoadHippocampusData
 
 class Config:
@@ -13,12 +14,12 @@ class Config:
     """
     def __init__(self):
         self.name = "Basic_unet"
-        self.root_dir = r"YOUR DIRECTORY HERE"
+        self.root_dir = "./out/"
         self.n_epochs = 10
         self.learning_rate = 0.0002
         self.batch_size = 8
         self.patch_size = 64
-        self.test_results_dir = "RESULTS GO HERE"
+        self.test_results_dir = "./runs"
 
 if __name__ == "__main__":
     # Get configuration
@@ -49,7 +50,9 @@ if __name__ == "__main__":
     # the array with indices of training volumes to be used for training, validation 
     # and testing respectively.
     # <YOUR CODE GOES HERE>
-
+    split['train'], val_keys = train_test_split(keys, test_size=0.2)
+    split['val'], split['test'] = train_test_split(val_keys, test_size=0.5)
+    
     # Set up and run experiment
     
     # TASK: Class UNetExperiment has missing pieces. Go to the file and fill them in
@@ -62,6 +65,7 @@ if __name__ == "__main__":
     # run training
     exp.run()
 
+#     exp.load_model_parameters("./runs/2020-06-13_1801_Basic_unet/model.pth")
     # prep and run testing
 
     # TASK: Test method is not complete. Go to the method and complete it
