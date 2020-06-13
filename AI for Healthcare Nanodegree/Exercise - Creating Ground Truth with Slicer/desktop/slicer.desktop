@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Slicer
+Path=/opt/aihcnd-applications/Slicer-4.10.2-linux-amd64
+Exec=bash -c "cd /opt/aihcnd-applications/Slicer-4.10.2-linux-amd64/ && ./Slicer"
+Type=Application
+Terminal=false
+Icon=slicer

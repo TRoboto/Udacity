@@ -1,5 +1,5 @@
 # In this exercise you will use your knowledge of DICOM and DICOM networking 
-# to analyze an MR study on disk (this code could be running as a part of an AI server software), 
+# to analyze an MR study on disk (imagine your code running as a part of an AI server software), 
 # select the series to process and send this series to a DICOM SCP 
 # (which could be running your AI algorithm!)
 
@@ -39,6 +39,23 @@ if __name__ == "__main__":
     if not os.path.isdir(dicom_path):
         exit("Expecting valid directory as first argument")
 
-    # TASK: Your code here
+    series = np.array([[(os.path.join(dp, f), pydicom.dcmread(os.path.join(dp, f), stop_before_pixels = True)) for f in files] for dp,_,files in os.walk(dicom_path) if len(files) != 0])
+    
 
+    flair_series = [s for s in series if "FLAIR" in s[0][1].SeriesDescription]
+
+    # It might seem crazy that you would be picking series based on a freeform text field, 
+    # but unfortunately, that's quite often the reality of real-world integrations - there is 
+    # no reliable way in DICOM to determine the MR sequence type based on DICOM tags. 
+    # Good thing, though, is that the series description text is often set automatically
+    # by the modality, so in a real-world integration you can come to an agreement with 
+    # the radiology department to always have some sort of flag in the descriptions of series
+    # that are to be processed by your algorithm. 
+    # Of course, your algorithm will be more scalable if you come up with a way to do this
+    # that does not require intervention from your users.
+
+    if (len(flair_series) != 1):
+        exit("Error: More than one FLAIR candidates")
+
+    os_command(f"storescu 127.0.0.1 109 -v -aec TESTSCU +r +sd \"{os.path.dirname(flair_series[0][0][0])}\"")
     pass
