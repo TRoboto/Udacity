@@ -97,8 +97,8 @@ class UNetExperiment:
             # shape [BATCH_SIZE, 1, PATCH_SIZE, PATCH_SIZE] into variables data and target. 
             # Feed data to the model and feed target to the loss function
             # 
-            # data = <YOUR CODE HERE>
-            # target = <YOUR CODE HERE>
+            data = batch['image'].to(self.device)
+            target = batch['seg'].to(self.device)
 
             prediction = self.model(data)
 
@@ -109,7 +109,7 @@ class UNetExperiment:
             loss = self.loss_function(prediction, target[:, 0, :, :])
 
             # TASK: What does each dimension of variable prediction represent?
-            # ANSWER:
+            # ANSWER: dim 0: batch size, dim 2 and 3: image voxels
 
             loss.backward()
             self.optimizer.step()
@@ -155,10 +155,18 @@ class UNetExperiment:
                 # TASK: Write validation code that will compute loss on a validation sample
                 # <YOUR CODE HERE>
 
-                print(f"Batch {i}. Data shape {data.shape} Loss {loss}")
+                
+                data = batch['image'].to(self.device)
+                target = batch['seg'].to(self.device)
 
+                prediction = self.model(data)
+                prediction_softmax = F.softmax(prediction, dim=1)
+                loss = self.loss_function(prediction, target[:, 0, :, :])
+                
                 # We report loss that is accumulated across all of validation set
                 loss_list.append(loss.item())
+                
+                print(f"Batch {i}. Data shape {data.shape} Loss {loss}")
 
         self.scheduler.step(np.mean(loss_list))
 
