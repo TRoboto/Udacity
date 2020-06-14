@@ -39,7 +39,6 @@ def load_dicom_volume_as_numpy_from_list(dcmlist):
 
     # In the real world you would do a lot of validation here
     slices = [np.flip(dcm.pixel_array).T for dcm in sorted(dcmlist, key=lambda dcm: dcm.InstanceNumber)]
-
     # Make sure that you have correctly constructed the volume from your axial slices!
     hdr = dcmlist[0]
 
@@ -62,7 +61,11 @@ def get_predicted_volumes(pred):
 
     # TASK: Compute the volume of your hippocampal prediction
     # <YOUR CODE HERE>
-
+    
+    volume_ant = np.sum(pred==1)
+    volume_post = np.sum(pred==2)
+    total_volume = volume_ant + volume_post
+    
     return {"anterior": volume_ant, "posterior": volume_post, "total": total_volume}
 
 def create_report(inference, header, orig_vol, pred_vol):
@@ -90,7 +93,7 @@ def create_report(inference, header, orig_vol, pred_vol):
     header_font = ImageFont.truetype("assets/Roboto-Regular.ttf", size=40)
     main_font = ImageFont.truetype("assets/Roboto-Regular.ttf", size=20)
 
-    slice_nums = [orig_vol.shape[2]//3, orig_vol.shape[2]//2, orig_vol.shape[2]*3//4] # is there a better choice?
+#     slice_nums = [orig_vol.shape[2]//3, orig_vol.shape[2]//2, orig_vol.shape[2]*3//4] # is there a better choice?
 
     # TASK: Create the report here and show information that you think would be relevant to
     # clinicians. A sample code is provided below, but feel free to use your creative 
@@ -99,11 +102,21 @@ def create_report(inference, header, orig_vol, pred_vol):
     # depend on how you present them.
 
     # SAMPLE CODE BELOW: UNCOMMENT AND CUSTOMIZE
-    # draw.text((10, 0), "HippoVolume.AI", (255, 255, 255), font=header_font)
-    # draw.multiline_text((10, 90),
-    #                     f"Patient ID: {header.PatientID}\n"
-    #                       <WHAT OTHER INFORMATION WOULD BE RELEVANT?>
-    #                     (255, 255, 255), font=main_font)
+    draw.text((70, 70), "HippoVolume.AI_1", (255, 255, 255), font=header_font)
+    
+    volume_unit = float(header.SliceThickness)*np.prod(header.PixelSpacing)
+    vol_size = volume_unit * inference["total"]
+    
+    draw.multiline_text((50, 140),
+                        f"Patient ID: {header.PatientID} \n \
+                        Study Description : {header.StudyDescription}\n \
+                        Series Description: {header.SeriesDescription}\n \
+                        Modality: {header.Modality}\n \
+                        Image Type: {header.ImageType}\n \
+                        Anterior Volume: {inference['anterior']}\n \
+                        Posterior Volume: {inference['posterior']}\n \
+                        Total Volume: {inference['total']}\n",                                     
+                        (255, 255, 255), font=main_font)
 
     # STAND-OUT SUGGESTION:
     # In addition to text data in the snippet above, can you show some images?
@@ -112,11 +125,18 @@ def create_report(inference, header, orig_vol, pred_vol):
     #
     # Create a PIL image from array:
     # Numpy array needs to flipped, transposed and normalized to a matrix of values in the range of [0..255]
-    # nd_img = np.flip((slice/np.max(slice))*0xff).T.astype(np.uint8)
-    # This is how you create a PIL image from numpy array
-    # pil_i = Image.fromarray(nd_img, mode="L").convert("RGBA").resize(<dimensions>)
-    # Paste the PIL image into our main report image object (pimg)
-    # pimg.paste(pil_i, box=(10, 280))
+    
+    nd_orig = np.flip((orig_vol[0, :, :]/np.max(orig_vol[0, :, :]))*0xff).T.astype(np.uint8)
+    # create a PIL image from numpy array
+    pil_orig = Image.fromarray(nd_orig, mode="L").convert("RGBA").resize((400, 400))
+    # paste the PIL image into the main report image object (pimg)
+    pimg.paste(pil_orig, box=(10, 350))
+    
+    nd_pred = np.flip((pred_vol[0, :, :]/np.max(pred_vol[0, :, :]))*0xff).T.astype(np.uint8)
+    # create a PIL image from numpy array
+    pil_pred = Image.fromarray(nd_pred, mode="L").convert("RGBA").resize((400, 400))
+    # paste the PIL image into the main report image object (pimg)
+    pimg.paste(pil_pred, box=(10, 350)) 
 
     return pimg
 
@@ -216,8 +236,13 @@ def get_series_for_inference(path):
     # Here we are assuming that path is a directory that contains a full study as a collection
     # of files
     # We are reading all files into a list of PyDicom objects so that we can filter them later
-    dicoms = [pydicom.dcmread(os.path.join(path, f)) for f in os.listdir(path)]
-
+    series_path = [dir for dir, subdirs, files in os.walk(path) if 'HCropVolume' in dir]
+    chosen_path = np.random.choice(series_path)  
+#     dicoms = [pydicom.dcmread(os.path.join(path, f)) for f in os.listdir(path)]
+#     dicoms = []
+    #     for dir , subdirs, files in os.walk(pat:
+#         for subdir in subds: 
+#             dicoms.extend([pydicom.dcmread(os.path.join(path, subdir, f)) for f in os.listdir(os.path.join(path, subdir))])
     # TASK: create a series_for_inference variable that will contain a list of only 
     # those PyDicom objects that represent files that belong to the series that you 
     # will run inference on.
@@ -228,8 +253,10 @@ def get_series_for_inference(path):
     # people who configured the HippoCrop tool and they label the output of their tool in a 
     # certain way. Can you figure out which is that? 
     # Hint: inspect the metadata of HippoCrop series
-
+    
     # <YOUR CODE HERE>
+    series_for_inference = [pydicom.dcmread(os.path.join(chosen_path, f)) for f in os.listdir(chosen_path)]
+#     series_for_inference = [d for d in dicoms if d.SeriesDescription=="HippoCrop"]
 
     # Check if there are more than one series (using set comprehension).
     if len({f.SeriesInstanceUID for f in series_for_inference}) != 1:
@@ -260,7 +287,6 @@ if __name__ == "__main__":
 
     # Get the latest directory
     study_dir = sorted(subdirs, key=lambda dir: os.stat(dir).st_mtime, reverse=True)[0]
-
     print(f"Looking for series to run inference on in directory {study_dir}...")
 
     # TASK: get_series_for_inference is not complete. Go and complete it
@@ -271,7 +297,7 @@ if __name__ == "__main__":
     # TASK: Use the UNetInferenceAgent class and model parameter file from the previous section
     inference_agent = UNetInferenceAgent(
         device="cpu",
-        parameter_file_path=r"<PATH TO PARAMETER FILE>")
+        parameter_file_path=r"../out/model.pth")
 
     # Run inference
     # TASK: single_volume_inference_unpadded takes a volume of arbitrary size 
@@ -283,7 +309,7 @@ if __name__ == "__main__":
 
     # Create and save the report
     print("Creating and pushing report...")
-    report_save_path = r"<TEMPORARY PATH TO SAVE YOUR REPORT FILE>"
+    report_save_path = r"/home/workspace/out/report.dcm"
     # TASK: create_report is not complete. Go and complete it. 
     # STAND OUT SUGGESTION: save_report_as_dcm has some suggestions if you want to expand your
     # knowledge of DICOM format
@@ -293,7 +319,7 @@ if __name__ == "__main__":
     # Send report to our storage archive
     # TASK: Write a command line string that will issue a DICOM C-STORE request to send our report
     # to our Orthanc server (that runs on port 4242 of the local machine), using storescu tool
-    os_command("<COMMAND LINE TO SEND REPORT TO ORTHANC>")
+    os_command(f"storescu 127.0.0.1 4242 -v -aec HIPPOAI +r +sd {report_save_path}")
 
     # This line will remove the study dir if run as root user
     # Sleep to let our StoreSCP server process the report (remember - in our setup
