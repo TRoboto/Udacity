@@ -1,0 +1,6 @@
+tensorflow
+tensorflow_probability
+matplotlib
+aequitas
+ipykernel
+jupyterlab
