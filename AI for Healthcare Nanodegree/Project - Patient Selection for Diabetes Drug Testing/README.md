@@ -65,7 +65,7 @@ If you'd like to learn more about version control and using `git` from the comma
 1. Clone the repository, and navigate to the downloaded folder. This may take a minute or two to clone due to the included image data.
 ```
 git clone https://github.com/udacity/nd320-c1-emr-data-starter.git
-cd nd320-c1-emr-data-starter/project/
+cd nd320-c1-emr-data-starter
 ```
 
 2. Create (and activate) a new environment, named `udacity-ehr-env` with Python 3.7. If prompted to proceed with the install `(Proceed [y]/n)` type y.
@@ -85,12 +85,10 @@ cd nd320-c1-emr-data-starter/project/
 
 
 
-6. Install a few required pip packages, which are specified in the requirements text file. Be sure to run the command from the project root directory since the requirements.txt file is there. I also added a line for installing the environment in your notebook in case this is new for you. You should be able to now look for the environment when you select the kernel.
+6. Install a few required pip packages, which are specified in the requirements text file. Be sure to run the command from the project root directory since the requirements.txt file is there.
  
 ```
 pip install -r requirements.txt
-ipython3 kernel install --name udacity-ehr-env --user
-
 ```
 
 
