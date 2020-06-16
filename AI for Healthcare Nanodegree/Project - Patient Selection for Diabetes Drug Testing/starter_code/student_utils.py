@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import tensorflow as tf
+import functools
 
 ####### STUDENTS FILL THIS OUT ######
 #Question 3
@@ -40,20 +41,7 @@ def patient_dataset_splitter(df, patient_key='patient_nbr'):
      - validation: pandas dataframe,
      - test: pandas dataframe,
     '''
-    train_perc, val_perc, test_perc = 0.6, 0.2, 0.2
-    
-    df = df.iloc[np.random.permutation(len(df))]
-    unique_values = df[patient_key].unique()
-    total_values = len(unique_values)
-    
-    train_size = int(train_perc * total_values)
-    val_size = int(val_perc * total_values)
-    test_size = int(test_perc * total_values)
-    
-    train = df[df[patient_key].isin(unique_values[:train_size])].reset_index(drop=True)
-    validation = df[df[patient_key].isin(unique_values[train_size: train_size+val_size])].reset_index(drop=True)
-    test = df[df[patient_key].isin(unique_values[train_size+val_size:])].reset_index(drop=True)
-    
+    train, validation, test = np.split(df.sample(frac=1).reset_index(drop=True), [int(.6*len(df)), int(.8*len(df))])
     return train, validation, test
 
 #Question 7
