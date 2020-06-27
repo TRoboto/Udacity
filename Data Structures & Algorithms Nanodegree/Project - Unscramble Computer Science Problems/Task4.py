@@ -25,3 +25,18 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+from itertools import chain
+phones_in_texts = set(chain.from_iterable([(x[0], x[1]) for x in texts]))
+
+callers = set()
+recievers = set()
+
+for caller, reciever, _, _ in calls:
+    callers.add(caller)
+    recievers.add(reciever)
+
+telemarkerters =  sorted(callers - (phones_in_texts | recievers))
+print("These numbers could be telemarketers:")
+
+for number in telemarkerters:
+    print(number)
