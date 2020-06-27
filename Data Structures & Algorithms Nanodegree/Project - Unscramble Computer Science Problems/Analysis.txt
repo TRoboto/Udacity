@@ -1,0 +1,22 @@
+Big O Analysis
+
+Task 0: 
+	- O(1)
+	- The function is independent of the input.
+	
+Task 1: 
+	- O(n)
+	- The function depends on the number of records in the both datasets thus having a linear time.
+
+Task 2: 
+	- O(n)
+	- The function depends on the number of calls thus having a linear time.
+	
+Task 3: 
+	- O(nlog(n))
+	- There are two loops that depend on the number of calls thus having a linear time O(2n). It also sorts the results thus having O(nlog(n)). Combining them would give O(nlog(n) + 2n). But it can be simplified to O(nlog(n)).
+
+Task 4: 
+	- O(nlog(n))
+	- There are two loops that depend on the number of calls thus having a linear time O(2n). It also sorts the results thus having O(nlog(n)). Combining them would give O(nlog(n) + 2n). But it can be simplified to O(nlog(n)).
+	
