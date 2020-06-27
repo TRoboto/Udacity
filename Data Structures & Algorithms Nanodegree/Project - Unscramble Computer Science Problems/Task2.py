@@ -20,3 +20,17 @@ Print a message:
 September 2016.".
 """
 
+from collections import defaultdict
+from datetime import datetime
+
+selected_calls = defaultdict(int)
+
+
+for caller, reciever, timestamp, duration in calls:
+    date = datetime.strptime(timestamp, "%d-%m-%Y %H:%M:%S")
+    if date.year == 2016 and date.month == 9:
+        selected_calls[caller] += int(duration)
+        selected_calls[reciever] += int(duration)
+		
+max_duration = max(selected_calls.items(), key=lambda x: x[1])
+print(f"{max_duration[0]} spent the longest time, {max_duration[1]} seconds, on the phone during September 2016.")
