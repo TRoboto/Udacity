@@ -13403,7 +13403,41 @@ States have length: 37
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The parameters choosen for the DQR are as follows:</p>
+<h3 id="5.-Learning-Algorithm">5. Learning Algorithm<a class="anchor-link" href="#5.-Learning-Algorithm">&#182;</a></h3><p>The DQN algorithm is used to train the agent. It uses a fully connected neural network (NN) layers as a function approximator for the Q function. The NN consists of two hidden layers, each with 64 units. The input layer receives the states with 37 units and the output layer has four units for the possible actions.</p>
+
+<pre><code>QNetwork(
+  (fc1): Linear(in_features=37, out_features=64, bias=True)
+  (fc2): Linear(in_features=64, out_features=64, bias=True)
+  (fc3): Linear(in_features=64, out_features=4, bias=True)
+)</code></pre>
+<p>The agents uses two identical architecture NNs to learn through interactions with the envrionment. The first, which is refered to as local QNetwork, is used to train the agent. The second, which is the target QNetwork, is used only in the error calculation to make the training process more stable.</p>
+<p>The algorithm performs and repeats two main tasks, which are:</p>
+<ol>
+<li>The sampling process:<ul>
+<li>The agent chooses an action from the state using a given policy.<ul>
+<li>The action is chosen using the $\epsilon-greedy$ algorithm where the next best action has 
+ the highest probabilty to be selected and low $\epsilon$ probability for all other actions.</li>
+</ul>
+</li>
+<li>The agent takes the action and receives new data from the environment. The data is in form of tuples <code>(next_state, reward, done)</code>. </li>
+<li>Store its experience tuple in a replay memory.</li>
+<li>Set state to the next state.</li>
+</ul>
+</li>
+<li>The learning process:<ul>
+<li>Obtain a random batch of tuples from the replay memory.</li>
+<li>Use the target QNetwork to get the target value.
+<pre><code>target = rewards + (gamma * Q_targets_next * (1 - dones))</code></pre>
+</li>
+<li>Use the local QNetwork to get the expected value.</li>
+<li>Calculate the MSE between both returned values. </li>
+<li>Do an optimization step to change the weights of the local network.</li>
+<li>Do a soft update </li>
+</ul>
+</li>
+</ol>
+<p>Near the end and if the agent learned successfully, it will choose the best possible action at each state.</p>
+<p>The parameters I chose for the DQN are as follows:</p>
 
 <pre><code>BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 64         # minibatch size
@@ -13411,12 +13445,11 @@ GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR = 5e-4               # learning rate 
 UPDATE_EVERY = 4        # how often to update the network</code></pre>
-<p>And for the e-greedy algorithm:</p>
+<p>And for the $\epsilon$-greedy algorithm:</p>
 
 <pre><code>eps_start = 1.0         # starting value of epsilon
 eps_end = 0.01          # minimum value of epsilon
 eps_decay = 0.995       # multiplicative factor (per episode) for decreasing epsilon</code></pre>
-<p>The DQN consists of two hidden layers, each with 64 units. The input layer receives the states with 37 units and the output layer has four units for the possible actions.</p>
 
 </div>
 </div>
