@@ -1,0 +1,3 @@
+Couldn't open file /opt/intel/openvino/bitstreams/a10_vision_design_sg1_bitstreams/2019R4_PL1_FP16_MobileNet_Clamp.aocx for reading
+person_detect.py:48: DeprecationWarning: Reading network using constructor is deprecated. Please, use IECore.read_network() method instead
+  self.model=IENetwork(self.model_structure, self.model_weights)
