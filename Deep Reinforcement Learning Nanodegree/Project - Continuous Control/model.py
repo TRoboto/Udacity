@@ -12,7 +12,7 @@ def hidden_init(layer):
 class Actor(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=400, fc2_units=300):
+    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=128):
         """Initialize parameters and build model.
         Params
         ======
@@ -37,7 +37,7 @@ class Actor(nn.Module):
 
     def forward(self, state):
         """Build an actor (policy) network that maps states -> actions."""
-		if state.dim() == 1:
+        if state.dim() == 1:
             state = torch.unsqueeze(state, 0)
         x = F.relu(self.fc1(state))
         x = self.bnorm(x)
@@ -48,7 +48,7 @@ class Actor(nn.Module):
 class Critic(nn.Module):
     """Critic (Value) Model."""
 
-    def __init__(self, state_size, action_size, seed, fcs1_units=400, fc2_units=300):
+    def __init__(self, state_size, action_size, seed, fcs1_units=256, fc2_units=128):
         """Initialize parameters and build model.
         Params
         ======
@@ -75,7 +75,7 @@ class Critic(nn.Module):
         """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
         if state.dim() == 1:
             state = torch.unsqueeze(state, 0)
-		xs = F.relu(self.fcs1(state))
+        xs = F.relu(self.fcs1(state))
         xs = self.bnorm(xs)
         x = torch.cat((xs, action), dim=1)
         x = F.relu(self.fc2(x))
