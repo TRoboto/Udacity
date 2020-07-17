@@ -86,3 +86,20 @@ Then, place the file in the `p2_continuous-control/` folder in the DRLND GitHub 
 
 (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler_Linux_NoVis.zip) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
+
+### Files Overview
+
+There are five files as follows:
+```
+Continuous_Control.ipynb - the main notebook that trains the agent
+my_agent.py - defines the Agent to be trained
+model.py - defines the PyTorch models for both the Actor and the Critic networks
+checkpoint_actor.pth - the final trained Actor network
+checkpoint_critic.pth - the final trained Critic network
+```
+
+### Results for the first option
+
+The average reward over 100 episodes is illustrated below. The environment has been solved in 174 episodes with an average score of 30.13. However, the agent is trained for 400 episodes, so that the agent has the ability to achieve a better score. As a result, the best average score is achieved in 342 episodes with a score of 35.54.
+
+![Result](result.png)
