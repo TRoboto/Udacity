@@ -89,7 +89,7 @@ agent2_checkpoint_actor.pth - the final trained Actor network for the second age
 agent2_checkpoint_critic.pth - the final trained Critic network for the second agent
 ```
 
-### Results for the first option
+### Results
 
 The average reward over 100 episodes is illustrated below. The environment has been solved in 901 episodes with an average score of 0.5089.
 
