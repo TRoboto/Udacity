@@ -5,3 +5,4 @@ numpy==1.17.4
 Pillow==6.2.1
 requests==2.22.0
 virtualenv==16.7.9
+PyAutoGUI==0.9.50
