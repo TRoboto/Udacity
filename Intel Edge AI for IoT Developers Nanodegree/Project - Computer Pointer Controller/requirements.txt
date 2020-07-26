@@ -1,0 +1,7 @@
+image==1.5.27
+ipdb==0.12.3
+ipython==7.10.2
+numpy==1.17.4
+Pillow==6.2.1
+requests==2.22.0
+virtualenv==16.7.9
