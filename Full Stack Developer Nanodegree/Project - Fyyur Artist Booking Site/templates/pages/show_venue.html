@@ -74,6 +74,34 @@
 		{% endfor %}
 	</div>
 </section>
+<div class="edit-buttons" role="group" aria-label="Edits">
+    <form method="get" action="/venues/{{venue.id}}/edit" class="btn-group">
+        <button type="submit" class="btn btn-secondary"  data-id="{{ venue.id }}" style="width: 150px; height:34px;">Edit Venue</button>
+    </form>
+    <!-- delete button  -->
 
+    <button type="submit" onclick="deleteClickHandler(this)" data-id="{{ venue.id }}" class="btn btn-secondary"
+        style="width: 150px; height:34px;">
+            Delete Venue
+    </button>
+
+</div>
+<script>
+
+    function deleteClickHandler(e) {
+        console.log('clicked')
+        const venueId = e.dataset.id;
+        fetch('/venues/' + venueId, {
+            method: 'DELETE'
+        })
+            .then(function () {
+                window.location.href = `/venues`;
+            })
+            .catch(function (e) {
+                console.log('error', e)
+            })
+    }
+
+</script>
 {% endblock %}
 

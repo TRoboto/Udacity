@@ -1,1 +1,2494 @@
 
+2020-09-04 10:32:47,442 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:530]
+2020-09-04 10:52:29,868 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:518]
+2020-09-04 10:52:57,749 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 221, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 94, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 10:55:53,412 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 221, in show_venue
+    "past_shows_count": 1,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 94, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 11:00:48,878 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:472]
+2020-09-04 11:00:56,283 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 141, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:19:35,154 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:472]
+2020-09-04 11:19:40,934 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 141, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:20:03,107 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:472]
+2020-09-04 11:21:44,420 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:471]
+2020-09-04 11:21:45,235 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 141, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:23:15,365 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:471]
+2020-09-04 11:23:15,999 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 141, in show_venue
+    venue = db.session.query(Venue).filter(Venue.id == venue_id).one()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1584, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 197, in __init__
+    self._set_entities(entities)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 225, in _set_entities
+    self._set_entity_selectables(self._entities)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 256, in _set_entity_selectables
+    ent.setup_entity(*d[entity])
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 4297, in setup_entity
+    self._with_polymorphic = ext_info.with_polymorphic_mappers
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 2157, in _with_polymorphic_mappers
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:27:29,361 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:470]
+2020-09-04 11:27:40,565 ERROR: Exception on /venues/search [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 127, in search_venues
+    venues = Venue.query.filter(Venue.name.islike(f'%{search_term}%')).all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:30:38,455 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:30:48,012 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:32:05,639 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:33:25,724 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:33:49,412 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:34:00,209 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:34:43,979 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:34:53,136 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:470]
+2020-09-04 11:39:29,782 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:470]
+2020-09-04 11:39:47,715 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 140, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:42:34,738 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:495]
+2020-09-04 11:42:41,701 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 148, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:44:31,568 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:495]
+2020-09-04 11:44:37,383 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 148, in show_venue
+    venue = Venue.query.get(venue_id)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\relationships.py", line 2061, in entity
+    % (self.key, type(argument))
+sqlalchemy.exc.ArgumentError: relationship 'shows' expects a class or a mapper argument (received: <class 'sqlalchemy.sql.schema.Table'>)
+2020-09-04 11:45:57,116 INFO: errors [in J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\app.py:497]
+2020-09-04 11:46:55,934 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:497]
+2020-09-04 11:46:57,937 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 168, in show_venue
+    "genres": venue.genres.split(','),
+AttributeError: 'list' object has no attribute 'split'
+2020-09-04 11:47:16,613 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:497]
+2020-09-04 11:50:50,182 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:497]
+2020-09-04 11:53:24,670 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:500]
+2020-09-04 11:53:31,297 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "genres" violates not-null constraint
+DETAIL:  Failing row contains (4, dasd, aa, AZ, aafdfgdfgdfgfd, 1212312312, null, null, null, null, f, null, 0, 0).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 201, in create_venue_submission
+    db.session.commit()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1042, in commit
+    self.transaction.commit()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 504, in commit
+    self._prepare_impl()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2523, in flush
+    self._flush(objects)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2664, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2624, in _flush
+    flush_context.execute()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 589, in execute
+    uow,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    insert,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "genres" violates not-null constraint
+DETAIL:  Failing row contains (4, dasd, aa, AZ, aafdfgdfgdfgfd, 1212312312, null, null, null, null, f, null, 0, 0).
+
+[SQL: INSERT INTO venue (name, city, state, address, phone, image_link, facebook_link, genres, website, seeking_talent, seeking_description, past_shows_count, upcoming_shows_count) VALUES (%(name)s, %(city)s, %(state)s, %(address)s, %(phone)s, %(image_link)s, %(facebook_link)s, %(genres)s, %(website)s, %(seeking_talent)s, %(seeking_description)s, %(past_shows_count)s, %(upcoming_shows_count)s) RETURNING venue.id]
+[parameters: {'name': 'dasd', 'city': 'aa', 'state': 'AZ', 'address': 'aafdfgdfgdfgfd', 'phone': '1212312312', 'image_link': None, 'facebook_link': None, 'genres': None, 'website': None, 'seeking_talent': False, 'seeking_description': None, 'past_shows_count': 0, 'upcoming_shows_count': 0}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 205, in create_venue_submission
+    flash('An error occurred. Venue ' + form.name.data + ' could not be added.')
+AttributeError: 'ImmutableMultiDict' object has no attribute 'name'
+2020-09-04 11:53:59,682 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:500]
+2020-09-04 11:54:15,977 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 11:55:18,544 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 11:55:20,939 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 199, in create_venue_submission
+    print(**form)
+TypeError: print() takes at most 4 keyword arguments (5 given)
+2020-09-04 11:55:36,201 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 11:55:51,305 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 11:56:47,833 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 11:56:49,558 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 199, in create_venue_submission
+    for g in new_venue:
+TypeError: 'Venue' object is not iterable
+2020-09-04 11:58:07,629 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:502]
+2020-09-04 12:00:38,525 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:512]
+2020-09-04 12:00:41,561 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 205, in create_venue_submission
+    website=form.website.data,
+AttributeError: 'VenueForm' object has no attribute 'website'
+2020-09-04 12:02:24,324 ERROR: Exception on /venues/search [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 747, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'islike'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 229, in __getattr__
+    return getattr(self.comparator, key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 977, in __getattr__
+    return self._fallback_getattr(key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\properties.py", line 364, in _fallback_getattr
+    return getattr(self.__clause_element__(), key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 758, in __getattr__
+    replace_context=err,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'islike'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 136, in search_venues
+    venues = Venue.query.filter(Venue.name.islike(f'%{search_term}%')).all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 242, in __getattr__
+    replace_context=err,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Venue.name has an attribute 'islike'
+2020-09-04 12:02:29,111 ERROR: Exception on /venues/search [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 747, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'islike'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 229, in __getattr__
+    return getattr(self.comparator, key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 977, in __getattr__
+    return self._fallback_getattr(key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\properties.py", line 364, in _fallback_getattr
+    return getattr(self.__clause_element__(), key)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 758, in __getattr__
+    replace_context=err,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'islike'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 136, in search_venues
+    venues = Venue.query.filter(Venue.name.islike(f'%{search_term}%')).all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 242, in __getattr__
+    replace_context=err,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Venue.name has an attribute 'islike'
+2020-09-04 12:05:48,090 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:512]
+2020-09-04 12:08:27,572 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:512]
+2020-09-04 12:08:28,630 ERROR: Exception on /venues/create [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 192, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 41, in block "content"
+    {{ form.website(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
+jinja2.exceptions.UndefinedError: 'forms.VenueForm object' has no attribute 'website'
+2020-09-04 12:08:29,981 ERROR: Exception on /venues/create [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 192, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 41, in block "content"
+    {{ form.website(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
+jinja2.exceptions.UndefinedError: 'forms.VenueForm object' has no attribute 'website'
+2020-09-04 12:08:31,197 ERROR: Exception on /venues/create [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 192, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 41, in block "content"
+    {{ form.website(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
+jinja2.exceptions.UndefinedError: 'forms.VenueForm object' has no attribute 'website'
+2020-09-04 12:08:33,184 ERROR: Exception on /venues/create [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 192, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\forms\new_venue.html", line 41, in block "content"
+    {{ form.website(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
+jinja2.exceptions.UndefinedError: 'forms.VenueForm object' has no attribute 'website'
+2020-09-04 12:09:34,473 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:512]
+2020-09-04 12:09:56,088 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:510]
+2020-09-04 12:10:14,447 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 206, in create_venue_submission
+    seeking_talent=form.seeking_talent.data,
+AttributeError: 'VenueForm' object has no attribute 'seeking_talent'
+2020-09-04 12:10:26,752 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 206, in create_venue_submission
+    )
+AttributeError: 'VenueForm' object has no attribute 'seeking_talent'
+2020-09-04 12:10:35,760 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:10:37,212 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 211, in create_venue_submission
+    flash('Venue ' + form['name'] + ' was successfully listed!')
+TypeError: can only concatenate str (not "StringField") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 213, in create_venue_submission
+    flash('An error occurred. Venue ' + form['name'] + ' could not be added.')
+TypeError: can only concatenate str (not "StringField") to str
+2020-09-04 12:11:27,635 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:11:31,767 ERROR: Exception on /venues/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 199, in create_venue_submission
+    new_venue = Venue(**form)
+TypeError: DefaultMeta object argument after ** must be a mapping, not VenueForm
+2020-09-04 12:11:52,158 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:500]
+2020-09-04 12:19:30,130 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:23:10,350 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:23:42,148 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:25:12,604 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:25:30,700 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:501]
+2020-09-04 12:26:30,670 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:499]
+2020-09-04 12:33:32,634 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:33:55,727 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:35:46,713 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:39:23,337 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:41:23,495 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:41:55,296 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:43:59,768 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:44:07,492 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:44:44,889 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:48:41,154 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:49:41,550 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:50:12,403 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:54:47,278 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:54:52,776 ERROR: Exception on /venues/12 [DELETE] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 226, in delete_venue
+    return redirect(url_for('venue'))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'venue'. Did you mean 'venues' instead?
+2020-09-04 12:54:56,192 ERROR: Exception on /venues/16 [DELETE] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 226, in delete_venue
+    return redirect(url_for('venue'))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'venue'. Did you mean 'venues' instead?
+2020-09-04 12:55:21,409 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:508]
+2020-09-04 12:56:05,098 ERROR: Exception on /artists/4 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 340, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 68, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 12:57:57,944 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 12:58:06,453 ERROR: Exception on /artists [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 233, in artists
+    artists = Artist.query.get(Artist.id, Artist.name).all()
+TypeError: get() takes 2 positional arguments but 3 were given
+2020-09-04 12:58:25,201 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 12:58:25,977 ERROR: Exception on /artists [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 233, in artists
+    artists = Artist.query.get().all()
+TypeError: get() missing 1 required positional argument: 'ident'
+2020-09-04 12:59:32,470 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 12:59:33,647 ERROR: Exception on /artists [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 238, in artists
+    } for id, name in artists]
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 235, in <listcomp>
+    data = [{
+TypeError: cannot unpack non-iterable Venue object
+2020-09-04 13:00:35,536 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 13:01:25,915 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:503]
+2020-09-04 13:04:32,664 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:502]
+2020-09-04 13:04:37,257 ERROR: Exception on /artists/search [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 245, in search_artists
+    artists_found = Artist.query.get(Artist.name.ilike(f'%{search_term}%')).all()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 1018, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\loading.py", line 234, in load_on_pk_identity
+    if None in primary_key_identity:
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 3275, in __bool__
+    raise TypeError("Boolean value of this clause is not defined")
+TypeError: Boolean value of this clause is not defined
+2020-09-04 13:05:12,864 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:502]
+2020-09-04 13:06:15,556 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:502]
+2020-09-04 13:06:19,714 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 461, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 13:07:34,456 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:431]
+2020-09-04 13:07:37,345 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 262, in show_artist
+    data = {**artist}
+TypeError: 'Artist' object is not a mapping
+2020-09-04 13:08:38,340 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:462]
+2020-09-04 13:08:38,644 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 280, in show_artist
+    "address": artist.address,
+AttributeError: 'Artist' object has no attribute 'address'
+2020-09-04 13:08:41,981 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 280, in show_artist
+    "address": artist.address,
+AttributeError: 'Artist' object has no attribute 'address'
+2020-09-04 13:08:53,508 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:461]
+2020-09-04 13:15:25,735 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:456]
+2020-09-04 13:16:19,967 ERROR: Exception on /artists/2/edit [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 301, in edit_artist
+    new_artist = {**artist}
+TypeError: 'Artist' object is not a mapping
+2020-09-04 13:17:39,317 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:455]
+2020-09-04 13:18:05,867 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:455]
+2020-09-04 13:18:26,540 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:456]
+2020-09-04 13:18:38,307 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:455]
+2020-09-04 13:18:58,140 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 308, in edit_artist_submission
+    artist = Artist(form)
+TypeError: __init__() takes 1 positional argument but 2 were given
+2020-09-04 13:20:47,326 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:456]
+2020-09-04 13:21:02,682 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:456]
+2020-09-04 13:21:10,032 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 309, in edit_artist_submission
+    new_artist = Artist(old_vars)
+TypeError: __init__() takes 1 positional argument but 2 were given
+2020-09-04 13:21:31,983 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:456]
+2020-09-04 13:21:46,373 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:458]
+2020-09-04 13:21:48,420 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 311, in edit_artist_submission
+    new_artist = Artist(**old_vars)
+  File "<string>", line 4, in __init__
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\state.py", line 433, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\state.py", line 430, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 840, in _declarative_constructor
+    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
+TypeError: '_sa_instance_state' is an invalid keyword argument for Artist
+2020-09-04 13:25:15,586 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:457]
+2020-09-04 13:25:17,414 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 309, in edit_artist_submission
+    old_vars.remove('_sa_instance_state')
+AttributeError: 'dict' object has no attribute 'remove'
+2020-09-04 13:25:49,843 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:457]
+2020-09-04 13:26:34,531 ERROR: Exception on /artists/2/edit [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 301, in edit_artist
+    return render_template('forms/edit_artist.html', form=form, artist=artist.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+2020-09-04 13:29:20,914 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:457]
+2020-09-04 13:29:45,413 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:458]
+2020-09-04 13:30:00,806 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:458]
+2020-09-04 13:30:43,854 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:466]
+2020-09-04 13:32:32,338 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:461]
+2020-09-04 13:33:05,363 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:468]
+2020-09-04 13:33:23,625 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:466]
+2020-09-04 13:35:30,417 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:466]
+2020-09-04 13:35:36,357 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 318, in edit_artist_submission
+    artist.__setattr__(old_vars)
+TypeError:  expected 2 arguments, got 1
+2020-09-04 13:35:51,825 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:466]
+2020-09-04 13:35:52,666 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 318, in edit_artist_submission
+    artist.__setattr__(**old_vars)
+TypeError: wrapper __setattr__() takes no keyword arguments
+2020-09-04 13:37:18,406 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:466]
+2020-09-04 13:37:20,471 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 319, in edit_artist_submission
+    artist.__setattr__(key, item)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 273, in __set__
+    instance_state(instance), instance_dict(instance), value, None
+AttributeError: 'Artist' object has no attribute '_sa_instance_state'
+2020-09-04 13:37:47,228 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:467]
+2020-09-04 13:37:49,525 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 320, in edit_artist_submission
+    artist.__setattr__(key, item)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\sqlalchemy\orm\attributes.py", line 273, in __set__
+    instance_state(instance), instance_dict(instance), value, None
+AttributeError: 'Artist' object has no attribute '_sa_instance_state'
+2020-09-04 13:38:30,302 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:465]
+2020-09-04 13:39:21,638 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:465]
+2020-09-04 13:40:01,731 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:465]
+2020-09-04 13:40:02,087 ERROR: Exception on /artists/2/edit [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 317, in edit_artist_submission
+    for key, item in new_vars.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+2020-09-04 13:40:19,324 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:461]
+2020-09-04 13:44:28,070 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:463]
+2020-09-04 13:44:39,960 ERROR: Exception on /venues/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 151, in show_venue
+    shows = venue.shows
+AttributeError: 'NoneType' object has no attribute 'shows'
+2020-09-04 13:47:25,371 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:463]
+2020-09-04 13:51:57,905 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 422, in shows
+    file_handler.setFormatter(
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:03:17,920 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:449]
+2020-09-04 14:03:20,976 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 407, in create_show_submission
+    form['start_time'] = datetime.strptime(form['start_time'])
+TypeError: strptime() takes exactly 2 arguments (1 given)
+2020-09-04 14:03:35,570 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:449]
+2020-09-04 14:03:40,197 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 407, in create_show_submission
+    form['start_time'] = datetime.strptime(form['start_time'], '%Y-%m-%d %H:%M:%S.%f')
+  File "C:\Users\m4bh\anaconda3\lib\_strptime.py", line 577, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\m4bh\anaconda3\lib\_strptime.py", line 359, in _strptime
+    (data_string, format))
+ValueError: time data '2020-09-04 14:03:35' does not match format '%Y-%m-%d %H:%M:%S.%f'
+2020-09-04 14:03:55,644 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:449]
+2020-09-04 14:03:56,593 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 407, in create_show_submission
+    form['start_time'] = datetime.strptime(form['start_time'], '%Y-%m-%d %H:%M:%S')
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
+    is_immutable(self)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
+    raise TypeError("%r objects are immutable" % self.__class__.__name__)
+TypeError: 'ImmutableMultiDict' objects are immutable
+2020-09-04 14:05:35,642 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:449]
+2020-09-04 14:05:36,957 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 409, in create_show_submission
+    form['upcoming'] = (now < form['start_time'].start_time)
+AttributeError: 'datetime.datetime' object has no attribute 'start_time'
+2020-09-04 14:05:52,406 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:449]
+2020-09-04 14:05:56,047 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 409, in create_show_submission
+    form['upcoming'] = now < form['start_time'].start_time
+AttributeError: 'datetime.datetime' object has no attribute 'start_time'
+2020-09-04 14:06:17,010 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:06:17,317 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 409, in create_show_submission
+    print(form.start_time)
+AttributeError: 'dict' object has no attribute 'start_time'
+2020-09-04 14:06:31,128 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:06:31,284 ERROR: Exception on /shows/create [POST] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 410, in create_show_submission
+    form['upcoming'] = now < form['start_time'].start_time
+AttributeError: 'datetime.datetime' object has no attribute 'start_time'
+2020-09-04 14:06:46,299 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:07:22,301 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:07:59,406 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:08:14,701 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:09:04,450 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:09:17,580 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:09:43,652 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:452]
+2020-09-04 14:09:59,473 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:10:40,439 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:452]
+2020-09-04 14:12:21,722 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:14:21,972 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:14:51,196 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:14:59,040 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 394, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:15:57,897 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:16:00,307 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 394, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 95, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\dateutil\parser\_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\dateutil\parser\_parser.py", line 646, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\dateutil\parser\_parser.py", line 725, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\dateutil\parser\_parser.py", line 207, in split
+    return list(cls(s))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\dateutil\parser\_parser.py", line 76, in __init__
+    '{itype}'.format(itype=instream.__class__.__name__))
+TypeError: Parser must be a string or character stream, not datetime
+2020-09-04 14:16:13,814 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:16:14,140 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 394, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:17:53,771 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:17:54,939 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 394, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:17:56,617 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 394, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:19:33,731 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:19:34,081 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 395, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:19:50,876 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:19:51,133 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 395, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:20:19,111 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:20:19,608 ERROR: Exception on /shows [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 395, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\shows.html", line 9, in block "content"
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:21:23,246 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:21:34,071 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 272, in show_artist
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:22:07,655 ERROR: Exception on /venues/2 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 162, in show_venue
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:22:10,838 ERROR: Exception on /venues/2 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 162, in show_venue
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:22:21,873 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 272, in show_artist
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:22:29,251 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 272, in show_artist
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:23:17,315 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:23:57,973 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:25:21,417 ERROR: Exception on /artists/4 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 272, in show_artist
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:25:46,279 ERROR: Exception on /venues/18 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 162, in show_venue
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:25:48,797 ERROR: Exception on /venues/18 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 162, in show_venue
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:25:55,719 ERROR: Exception on /venues/18 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 162, in show_venue
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:26:24,265 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:26:31,150 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 272, in show_artist
+    upcoming_shows.add(new_show)
+AttributeError: 'list' object has no attribute 'add'
+2020-09-04 14:26:48,134 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:26:50,418 ERROR: Exception on /artists/1 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 292, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 54, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:26:54,902 ERROR: Exception on /venues/2 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 183, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 57, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:26:59,772 ERROR: Exception on /artists/4 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 292, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 54, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:27:21,390 ERROR: Exception on /venues/18 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 183, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_venue.html", line 57, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:28:05,518 ERROR: Exception on /venues/17/edit [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 330, in edit_venue
+    return render_template('forms/edit_venue.html', form=form, venue=venue.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+2020-09-04 14:33:46,836 ERROR: Exception on /venues/22/edit [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 330, in edit_venue
+    return render_template('forms/edit_venue.html', form=form, venue=venue.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+2020-09-04 14:34:50,404 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:35:57,986 ERROR: Exception on /artists/8/edit [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 301, in edit_artist
+    return render_template('forms/edit_artist.html', form=form, artist=artist.__dict__)
+AttributeError: 'NoneType' object has no attribute '__dict__'
+2020-09-04 14:36:26,400 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:450]
+2020-09-04 14:43:33,512 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:453]
+2020-09-04 14:44:04,884 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:454]
+2020-09-04 14:44:16,930 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:454]
+2020-09-04 14:45:31,120 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:452]
+2020-09-04 14:46:12,345 ERROR: Exception on /artists/8 [GET] [in C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 292, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "J:\GitHub repos\Udacity\Full Stack Developer Nanodegree\Project - Fyyur Artist Booking Site\templates\pages\show_artist.html", line 54, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py", line 100, in format_datetime
+    return babel.dates.format_datetime(date, format)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 738, in format_datetime
+    return parse_pattern(format).apply(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1232, in apply
+    return self % DateTimeFormat(datetime, locale)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1229, in __mod__
+    return self.format % other
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1264, in __getitem__
+    return self.format_weekday(char, num)
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 1397, in format_weekday
+    return get_day_names(width, context, self.locale)[weekday]
+  File "C:\Users\m4bh\anaconda3\lib\site-packages\babel\dates.py", line 314, in get_day_names
+    return Locale.parse(locale).days[context][width]
+AttributeError: 'NoneType' object has no attribute 'days'
+2020-09-04 14:47:09,395 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
+2020-09-04 14:47:49,900 INFO: errors [in J:/GitHub repos/Udacity/Full Stack Developer Nanodegree/Project - Fyyur Artist Booking Site/app.py:451]
