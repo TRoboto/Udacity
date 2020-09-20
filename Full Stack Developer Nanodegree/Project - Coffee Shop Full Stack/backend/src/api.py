@@ -16,6 +16,8 @@ CORS(app)
 !! NOTE THIS WILL DROP ALL RECORDS AND START YOUR DB FROM SCRATCH
 !! NOTE THIS MUST BE UNCOMMENTED ON FIRST RUN
 '''
+
+
 # db_drop_and_create_all()
 
 
@@ -42,21 +44,18 @@ def get_drinks_details(payload):
     }), 200
 
 
-@app.route('/drinks', methods=['POST'])
-@requires_auth('post:drinks')
+@app.route("/drinks", methods=['POST'])
+@requires_auth("post:drinks")
 def create_drink(payload):
-    data = request.get_json()
-
-    try:
+    if request.data:
+        data = json.loads(request.data.decode('utf-8'))
         new_drink = Drink(title=data['title'], recipe=json.dumps(data['recipe']))
-        new_drink.insert()
-    except:
-        abort(400)
-
-    return jsonify({
-        'success': True,
-        'drinks': [new_drink.long()]
-    }), 200
+        Drink.insert(new_drink)
+        drinks = list(map(Drink.long, Drink.query.all()))
+        return jsonify({
+            "success": True,
+            "drinks": drinks
+        })
 
 
 @app.route('/drinks/<int:drink_id>', methods=['PATCH'])
@@ -96,7 +95,7 @@ def delete_drink(payload, drink_id):
     except:
         abort(400)
 
-    return jsonify({'success': True, 'delete': id}), 200
+    return jsonify({'success': True, 'delete': drink_id}), 200
 
 
 ## Error Handling

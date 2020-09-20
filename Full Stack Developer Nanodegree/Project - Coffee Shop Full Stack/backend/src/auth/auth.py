@@ -1,10 +1,11 @@
-import json
-from flask import request, _request_ctx_stack
+from flask import request
 from functools import wraps
+import json
 from jose import jwt
 from urllib.request import urlopen
-import requests
 
+# Configuration
+# UPDATE THIS TO REFLECT YOUR AUTH0 ACCOUNT
 AUTH0_DOMAIN = 'dev-bqmbgdt0.eu.auth0.com'
 ALGORITHMS = ['RS256']
 API_AUDIENCE = 'http://localhost:5000'
