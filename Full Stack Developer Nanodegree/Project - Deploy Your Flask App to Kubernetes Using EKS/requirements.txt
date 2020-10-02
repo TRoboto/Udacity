@@ -1,4 +1,0 @@
-pyjwt
-flask
-gunicorn
-pytest
