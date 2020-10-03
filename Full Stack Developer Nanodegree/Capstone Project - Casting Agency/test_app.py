@@ -66,6 +66,29 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['success'])
         self.assertEqual(response.status_code, 200)
 
+    def test_add_movie_failed_auth(self):
+        response = self.client().post('/movies',
+                                      json={
+                                          'title': "test1",
+                                          'release': "33"
+                                      },
+                                      headers={
+                                          "Authorization": "Bearer " + os.environ['user_token']})
+        data = response.get_json()
+        self.assertFalse(data['success'])
+
+    def test_add_movie_failed_auth1(self):
+        response = self.client().post('/movies',
+                                      json={
+                                          'title': "test1",
+                                          'release': "33"
+                                      },
+                                      headers={
+                                          "Authorization": "Bearer " + os.environ['manager_token']})
+        data = response.get_json()
+        self.assertFalse(data['success'])
+
+		
     def test_add_movie_failed(self):
         response = self.client().post('/movies',
                                       json={
@@ -174,7 +197,22 @@ class AgencyTestCase(unittest.TestCase):
         data = response.get_json()
         self.assertFalse(data['success'])
         self.assertEqual(response.status_code, 404)
+		
+    def test_delete_movie_failed_auth(self):
+        self.test_add_movie_success()
+        response = self.client().delete('/movies/1',
+                                        headers={
+                                            "Authorization": "Bearer " + os.environ['user_token']})
+        data = response.get_json()
+        self.assertFalse(data['success'])
 
+    def test_delete_movie_failed_auth1(self):
+        self.test_add_movie_success()
+        response = self.client().delete('/movies/1',
+                                        headers={
+                                            "Authorization": "Bearer " + os.environ['manager_token']})
+        data = response.get_json()
+        self.assertFalse(data['success'])
 
 # Make the tests conveniently executable
 if __name__ == "__main__":
