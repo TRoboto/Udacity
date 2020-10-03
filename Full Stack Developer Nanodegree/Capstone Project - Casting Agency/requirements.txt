@@ -6,3 +6,5 @@ Flask_SQLAlchemy==2.4.0
 Flask_Script==2.0.6
 Flask==1.1.2
 jose==1.0.0
+psycopg2==2.8.6
+gunicorn
