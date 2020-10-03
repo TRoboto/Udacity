@@ -8,23 +8,20 @@ from models import setup_db, Actor, Movie
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
-    CORS(app)
     setup_db(app)
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-    # CORS Headers
     @app.after_request
     def after_request(response):
-        response.headers.add(
-            'Access-Control-Allow-Headers',
-            'Content-Type,Authorization,true'
-        )
-        response.headers.add(
-            'Access-Control-Allow-Methods',
-            'GET,PATCH,POST,DELETE,OPTIONS'
-        )
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        response.headers.add('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS')
         return response
 
-    @app.route('/actors', methods=['GET'])
+    @app.route('/')
+    def hello_world():
+        return "Hello, World"
+
+    @app.route('/actors')
     def get_actors():
         actors = Actor.query.all()
 
@@ -36,7 +33,7 @@ def create_app(test_config=None):
             'actors': list(map(Actor.format, actors))
         }), 200
 
-    @app.route('/movies', methods=['GET'])
+    @app.route('/movies')
     def get_movies():
         movies = Movie.query.all()
 
@@ -49,9 +46,9 @@ def create_app(test_config=None):
         }), 200
 
     # add new actor
-    @app.route('/add-actor', methods=['POST'])
+    @app.route('/actors', methods=['POST'])
     @requires_auth('post:actors')
-    def add_actor():
+    def add_actor(payload):
         data = request.get_json()
 
         if any(x not in data for x in ['name', 'age', 'gender']):
@@ -66,9 +63,9 @@ def create_app(test_config=None):
         }), 200
 
     # add new movie
-    @app.route('/add-movie', methods=['POST'])
+    @app.route('/movies', methods=['POST'])
     @requires_auth('post:movies')
-    def add_movie():
+    def add_movie(payload):
         data = request.get_json()
 
         if any(x not in data for x in ['title', 'release']):
@@ -85,7 +82,7 @@ def create_app(test_config=None):
     # edit actor
     @app.route('/actors/<int:actor_id>', methods=['PATCH'])
     @requires_auth('patch:actor')
-    def update_actor(actor_id):
+    def update_actor(payload, actor_id):
         if not actor_id:
             abort(404)
 
@@ -117,7 +114,7 @@ def create_app(test_config=None):
     # edit movie
     @app.route('/movies/<int:movie_id>', methods=['PATCH'])
     @requires_auth('patch:movie')
-    def update_movie(movie_id):
+    def update_movie(payload, movie_id):
         if not movie_id:
             abort(404)
 
@@ -145,7 +142,7 @@ def create_app(test_config=None):
     # delete actor
     @app.route('/actors/<int:actor_id>', methods=['DELETE'])
     @requires_auth('delete:actor')
-    def delete_actor(actor_id):
+    def delete_actor(payload, actor_id):
         if not actor_id:
             abort(404)
 
@@ -163,7 +160,7 @@ def create_app(test_config=None):
     # delete movie
     @app.route('/movies/<int:movie_id>', methods=['DELETE'])
     @requires_auth('delete:movie')
-    def delete_movie(movie_id):
+    def delete_movie(payload, movie_id):
         if not movie_id:
             abort(404)
 
@@ -182,6 +179,7 @@ def create_app(test_config=None):
     '''
     Example error handling for unprocessable entity
     '''
+
     @app.errorhandler(400)
     def bad_request(error):
         return jsonify({
@@ -221,6 +219,7 @@ def create_app(test_config=None):
             "error": error.status_code,
             "message": error.error['description']
         }), error.status_code
+
     return app
 
 
