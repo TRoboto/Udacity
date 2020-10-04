@@ -24,14 +24,6 @@ Once you have your virtual environment setup and running, install dependencies b
 pip install -r requirements.txt
 ```
 
-This will install all of the required packages.
-
-##### Key Dependencies
-
-- [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
-
-- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py. 
-
 ## Running the server
 
 Before running the application locally, make sure to change `database_url` in `models.py`
@@ -45,10 +37,9 @@ python app.py
 ## API Reference
 
 ## Getting Started
-Base URL: This application can be run locally. The hosted version is at `https://ry-fsnd-capstone.herokuapp.com`.
+The hosted version is at `https://udacity-final-project-fsnd.herokuapp.com/`.
 
-Authentication: This application requires authentication to perform various actions. All the endpoints require
-various permissions, except the root (or health) endpoint, that are passed via the `Bearer` token.
+Authentication: `Bearer`
 
 The application has three different types of roles, check `setup.sh` for JWT keys:
 - User
@@ -97,7 +88,7 @@ Hello, World
  - General
    - gets the list of all the actors
  
-Sample Response
+ - Response
 ```
 {
    "actors":[
@@ -124,7 +115,7 @@ Sample Response
    - age: string
  
 
-Sample Response
+ - Response
 ```
 {
     "actor": {
@@ -148,7 +139,7 @@ Sample Response
    - age: string
  
 
-Sample Response
+ - Response
 ```
 {
     "actor": {
@@ -167,7 +158,7 @@ Sample Response
    - requires `delete:actor` permission
    - will also delete the mapping to the movie but will not delete the movie from the database
  
-Sample Response
+ - Response
 ```
 {
     "success": true,
@@ -180,13 +171,13 @@ Sample Response
    - gets the list of all the movies
    - requires `get:movies` permission
  
-Sample Response
+ - Response
 ```
 {
    "movies":[
       {
          "id":1,
-         "release":"2020",
+         "release_year":"2020",
          "title":"Avengers"
       }
    ],
@@ -203,12 +194,12 @@ Sample Response
    - title: string
    - release: string
 
-Sample Response
+ - Response
 ```
 {
     "movie": {
         "id": 2,
-        "release": "2010",
+        "release_year": "2010",
         "title": "Avengers 2"
     },
     "success": true
@@ -224,12 +215,12 @@ Sample Response
    - title: string
    - release: string
 
-Sample Response
+ - Response
 ```
 {
     "movie": {
         "id": 2,
-        "release": "2010",
+        "release_year": "2010",
         "title": "Avengers 2"
     },
     "success": true
