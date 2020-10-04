@@ -1,10 +1,8 @@
 import os
 import unittest
-import json
-from flask_sqlalchemy import SQLAlchemy
 
 from app import create_app
-from models import setup_db, Actor, Movie
+from models import setup_db
 
 
 class AgencyTestCase(unittest.TestCase):
@@ -88,7 +86,6 @@ class AgencyTestCase(unittest.TestCase):
         data = response.get_json()
         self.assertFalse(data['success'])
 
-		
     def test_add_movie_failed(self):
         response = self.client().post('/movies',
                                       json={
@@ -119,11 +116,11 @@ class AgencyTestCase(unittest.TestCase):
     def test_patch_actor_success(self):
         self.test_add_actor_success()
         response = self.client().patch('/actors/1',
-                                      json={
-                                          'name': "test221"
-                                      },
-                                      headers={
-                                          "Authorization": "Bearer " + os.environ['admin_token']})
+                                       json={
+                                           'name': "test221"
+                                       },
+                                       headers={
+                                           "Authorization": "Bearer " + os.environ['admin_token']})
         data = response.get_json()
         self.assertTrue(data['success'])
         self.assertEqual(response.status_code, 200)
@@ -197,7 +194,7 @@ class AgencyTestCase(unittest.TestCase):
         data = response.get_json()
         self.assertFalse(data['success'])
         self.assertEqual(response.status_code, 404)
-		
+
     def test_delete_movie_failed_auth(self):
         self.test_add_movie_success()
         response = self.client().delete('/movies/1',
@@ -213,6 +210,7 @@ class AgencyTestCase(unittest.TestCase):
                                             "Authorization": "Bearer " + os.environ['manager_token']})
         data = response.get_json()
         self.assertFalse(data['success'])
+
 
 # Make the tests conveniently executable
 if __name__ == "__main__":

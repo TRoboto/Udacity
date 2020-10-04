@@ -1,9 +1,7 @@
-import os
-from sqlalchemy import Column, String, Integer, create_engine
 from flask_sqlalchemy import SQLAlchemy
-import json
 
-database_path = "postgres://jlplxordargurh:d288c6940b61290dc30d992ffeb849fcdefca4504afcb2171263b517b28f0ca7@ec2-34-231-56-78.compute-1.amazonaws.com:5432/d3msu9abr1hen"
+database_path = "postgres://jlplxordargurh:d288c6940b61290dc30d992ffeb849fcdefca4504afcb2171263b517b28f0ca7@ec2-34" \
+                "-231-56-78.compute-1.amazonaws.com:5432/d3msu9abr1hen "
 
 db = SQLAlchemy()
 
@@ -29,9 +27,6 @@ class Actor(db.Model):
     age = db.Column(db.String)
     gender = db.Column(db.String)
 
-    def __repr__(self):
-        return f"<Actor id='{self.id}' name='{self.name}'>"
-
     def __init__(self, name, age, gender):
         self.name = name
         self.age = age
@@ -49,7 +44,7 @@ class Actor(db.Model):
         db.session.commit()
 
     def format(self):
-        return{
+        return {
             'id': self.id,
             'name': self.name,
             'age': self.age,
@@ -63,9 +58,6 @@ class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     release = db.Column(db.String)
-
-    def __repr__(self):
-        return f"<Movie id='{self.id}' title='{self.title}'>"
 
     def __init__(self, title, release):
         self.title = title

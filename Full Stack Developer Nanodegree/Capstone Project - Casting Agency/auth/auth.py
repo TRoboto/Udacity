@@ -1,8 +1,9 @@
-from flask import request
-from functools import wraps
 import json
-from jose import jwt
+from functools import wraps
 from urllib.request import urlopen
+
+from flask import request
+from jose import jwt
 
 # Configuration
 # UPDATE THIS TO REFLECT YOUR AUTH0 ACCOUNT
