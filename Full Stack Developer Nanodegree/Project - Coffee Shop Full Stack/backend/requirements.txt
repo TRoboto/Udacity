@@ -6,7 +6,7 @@ Flask-SQLAlchemy==2.4.0
 future==0.17.1
 isort==4.3.18
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 lazy-object-proxy==1.4.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
