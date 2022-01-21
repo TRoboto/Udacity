@@ -1,6 +1,6 @@
 image==1.5.27
 ipdb==0.12.3
-ipython==7.10.2
+ipython==7.16.3
 numpy==1.17.4
 Pillow==6.2.1
 requests==2.22.0
