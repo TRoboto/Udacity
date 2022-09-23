@@ -6,7 +6,7 @@ jupyter
 pytest>=3.2.2
 docopt
 pyyaml
-protobuf==3.5.2
+protobuf==3.18.3
 grpcio==1.11.0
 torch==0.4.0
 pandas
